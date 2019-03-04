@@ -10,4 +10,3 @@ Assigned Tasks
 
 Creech Sources:
    https://www.audioblocks.com/
-   https://www.deviantart.com/coldlight211/art/Library-Top-Down-BG-474346576
