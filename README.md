@@ -1,6 +1,4 @@
-# LibraryTriva
-Assigned Tasks
-    
+# Assigned Tasks    
     Richard Creech = Correct/Incorrect - 2 screens
                      Question/Answer - 5 questions per subject per difficulty
     
