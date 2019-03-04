@@ -14,17 +14,17 @@ import javax.swing.JButton;
 @SuppressWarnings("serial")
 public class NewGame extends JFrame
 {
-	private JButton buttonOne;
+	private JButton helpButton;
 		 
 	public NewGame()
 	{
 		super("New Game");
 		setLayout(new FlowLayout());
 			 
-		buttonOne = new JButton("Help Page");
-		add(buttonOne);
+		helpButton = new JButton("Help Page");
+		add(helpButton);
 
-		buttonOne.addActionListener(new ActionListener ()
+		helpButton.addActionListener(new ActionListener ()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
