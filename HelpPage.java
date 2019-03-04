@@ -14,17 +14,17 @@ import javax.swing.JButton;
 @SuppressWarnings("serial")
 public class HelpPage extends JFrame
 {
-	private JButton quitGame;
+	private JButton quitButton;
 		 
 	public HelpPage()
 	{
 		super("Help Page");
 		setLayout(new FlowLayout());
 
-		quitGame = new JButton("CLOSE WINDOW");
-		add(quitGame);
+		quitButton = new JButton("CLOSE WINDOW");
+		add(quitButton);
 
-		quitGame.addActionListener(new ActionListener ()
+		quitButton.addActionListener(new ActionListener ()
 		{
 			public void actionPerformed(ActionEvent e)
 			{
