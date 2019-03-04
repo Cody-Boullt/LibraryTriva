@@ -14,23 +14,23 @@ import javax.swing.JButton;
 @SuppressWarnings("serial")
 public class Launcher extends JFrame 
 {
-	 private JButton buttonOne;
-	 private JButton buttonTwo;
-	 private JButton buttonThree;
+	 private JButton newButton;
+	 private JButton helpButton;
+	 private JButton quitButon;
 
 	 public Launcher()
 	 {
 		 super("Launcher");
 		 setLayout(new FlowLayout());
 
-		 buttonOne = new JButton("New Game");
-		 add(buttonOne);
-		 buttonTwo = new JButton("Help Page");
-		 add(buttonTwo);
-		 buttonThree = new JButton("Quit Game");
-		 add(buttonThree);
+		 newButton = new JButton("New Game");
+		 add(newButton);
+		 helpButton = new JButton("Help Page");
+		 add(helpButton);
+		 quitButon = new JButton("Quit Game");
+		 add(quitButon);
 
-		 buttonOne.addActionListener(new ActionListener ()
+		 newButton.addActionListener(new ActionListener ()
 		 {
 			 public void actionPerformed(ActionEvent e)
 			 {
@@ -41,7 +41,7 @@ public class Launcher extends JFrame
 			 }
 		 } );
 
-		 buttonTwo.addActionListener(new ActionListener()
+		 helpButton.addActionListener(new ActionListener()
 		 {
 			 public void actionPerformed(ActionEvent e)
 			 {
@@ -52,7 +52,7 @@ public class Launcher extends JFrame
 			 }
 		 } );
 
-		 buttonThree.addActionListener(new ActionListener ()
+		 quitButon.addActionListener(new ActionListener ()
 		 {
 			 public void actionPerformed(ActionEvent e)
 			 {
