@@ -34,9 +34,9 @@ public class Launcher extends JFrame
 		 {
 			 public void actionPerformed(ActionEvent e)
 			 {
-				 NewGame newGame = new NewGame();
-				 newGame.setSize( 400, 400 ); 
-				 newGame.setVisible(true);  
+				 Difficulty difficulty = new Difficulty();
+				 difficulty.setSize( 400, 400 ); 
+				 difficulty.setVisible(true);  
 				 dispose();
 			 }
 		 } );
@@ -59,6 +59,7 @@ public class Launcher extends JFrame
 				 dispose();
 			 }
 		 } );
+		 
 	 } // end Launcher
 
 	 public static void main(String[] args)
