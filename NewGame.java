@@ -15,6 +15,11 @@ import javax.swing.JButton;
 public class NewGame extends JFrame
 {
 	private JButton helpButton;
+	private JButton quitButton;
+	private JButton engButton;
+	private JButton mathButton;
+	private JButton sciButton;
+	private JButton histButton;
 		 
 	public NewGame()
 	{
@@ -23,6 +28,16 @@ public class NewGame extends JFrame
 			 
 		helpButton = new JButton("Help Page");
 		add(helpButton);
+		quitButton = new JButton("Quit Game");
+		add(quitButton);
+		engButton = new JButton("English");
+		add(engButton);
+		mathButton = new JButton("Math");
+		add(mathButton);
+		sciButton = new JButton("Science");
+		add(sciButton);
+		histButton = new JButton("History");
+		add(histButton);
 
 		helpButton.addActionListener(new ActionListener ()
 		{
@@ -34,6 +49,60 @@ public class NewGame extends JFrame
 				dispose();
 			}
 		} );
+		
+		quitButton.addActionListener(new ActionListener ()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				dispose();
+			}
+			
+		} );
+		
+		engButton.addActionListener(new ActionListener ()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				HelpPage helpPage = new HelpPage();
+				helpPage.setSize( 400, 400 );
+				helpPage.setVisible(true);
+				dispose();
+			}
+		} );
+		
+		mathButton.addActionListener(new ActionListener ()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				HelpPage helpPage = new HelpPage();
+				helpPage.setSize( 400, 400 );
+				helpPage.setVisible(true);
+				dispose();
+			}
+		} );
+		
+		sciButton.addActionListener(new ActionListener ()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				HelpPage helpPage = new HelpPage();
+				helpPage.setSize( 400, 400 );
+				helpPage.setVisible(true);
+				dispose();
+			}
+		} );
+		
+		histButton.addActionListener(new ActionListener ()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				HelpPage helpPage = new HelpPage();
+				helpPage.setSize( 400, 400 );
+				helpPage.setVisible(true);
+				dispose();
+			}
+		} );
+		
 	} // end NewGame
 	
 	public static void main( String[] args )
