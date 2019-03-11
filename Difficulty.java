@@ -4,74 +4,181 @@
  * 03/04/2019
  */
 
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
+import java.awt.Font;
+import java.awt.EventQueue;
 import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-import javax.swing.JFrame;
 import javax.swing.JButton;
-	
-@SuppressWarnings("serial")
-public class Difficulty extends JFrame
-{
-	private JButton easyButton;
-	private JButton mediumButton;
-	private JButton hardButton;
-		 
-	public Difficulty()
-	{
-		super("Difficulty");
-		setLayout(new FlowLayout());
-			 
-		easyButton = new JButton("Easy");
-		add(easyButton);
-		mediumButton = new JButton("Medium");
-		add(mediumButton);
-		hardButton = new JButton("Hard");
-		add(hardButton);
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
-		easyButton.addActionListener(new ActionListener ()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				NewGame newGame = new NewGame();
-				newGame.setSize( 400, 400 );
-				newGame.setVisible(true);
+@SuppressWarnings("serial")
+public class Difficulty extends JFrame {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Difficulty window = new Difficulty();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Difficulty() {
+		setTitle("Difficulty Selection");
+		getContentPane().setLayout(null);
+		
+		JLabel lblDifficulty = new JLabel("What grade are you in?");
+		lblDifficulty.setFont(new Font("Arial", Font.BOLD, 12));
+		lblDifficulty.setBounds(24, 54, 147, 24);
+		getContentPane().add(lblDifficulty);
+		
+		JButton btnEasy = new JButton("1st Grade");
+		btnEasy.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TopicSelect topic = new TopicSelect();
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
 				dispose();
 			}
-		} );
+		});
+		btnEasy.setFont(new Font("Arial", Font.BOLD, 12));
+		btnEasy.setBounds(247, 90, 108, 39);
+		getContentPane().add(btnEasy);
 		
-		mediumButton.addActionListener(new ActionListener ()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				NewGame newGame = new NewGame();
-				newGame.setSize( 400, 400 );
-				newGame.setVisible(true);
+		JButton btnMedium = new JButton("Kindergarten");
+		btnMedium.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TopicSelect topic = new TopicSelect();
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
 				dispose();
 			}
-		} );
+		});
+		btnMedium.setFont(new Font("Arial", Font.BOLD, 12));
+		btnMedium.setBounds(105, 90, 108, 39);
+		getContentPane().add(btnMedium);
 		
-		hardButton.addActionListener(new ActionListener ()
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				NewGame newGame = new NewGame();
-				newGame.setSize( 400, 400 );
-				newGame.setVisible(true);
+		JButton btnHard = new JButton("2nd Grade");
+		btnHard.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TopicSelect topic = new TopicSelect();
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
 				dispose();
 			}
-		} );
+		});
+		btnHard.setFont(new Font("Arial", Font.BOLD, 12));
+		btnHard.setBounds(105, 141, 108, 38);
+		getContentPane().add(btnHard);
 		
-	} // end NewGame
-	
-	public static void main( String[] args )
-	{
-		Difficulty application = new Difficulty();
-		application.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		application.setSize( 300, 300 );
-		application.setVisible( true );
-		 
-	} // end main
-	
-} // end NewGame
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 434, 23);
+		getContentPane().add(menuBar);
+		
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		
+		JMenuItem mntmMainMenu = new JMenuItem("Main Menu");
+		mntmMainMenu.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Launcher.main(null);
+				dispose();
+			}
+		});
+		mnFile.add(mntmMainMenu);
+		
+		JMenuItem mntmQuit = new JMenuItem("Quit");
+		mntmQuit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		mnFile.add(mntmQuit);
+		
+		JMenu mnHelp = new JMenu("Help");
+		menuBar.add(mnHelp);
+		
+		JMenuItem mntmHowToPlay = new JMenuItem("How to Play");
+		mntmHowToPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HowToPlay howTo = new HowToPlay();
+				howTo.setLocation( 250, 150 );
+				howTo.setSize( 450, 300 );
+				howTo.setVisible(true);
+			}
+		});
+		mnHelp.add(mntmHowToPlay);
+		
+		JButton btnrdGrade = new JButton("3rd Grade");
+		btnrdGrade.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TopicSelect topic = new TopicSelect();
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
+				dispose();
+			}
+		});
+		btnrdGrade.setFont(new Font("Arial", Font.BOLD, 12));
+		btnrdGrade.setBounds(247, 142, 108, 39);
+		getContentPane().add(btnrdGrade);
+		
+		JButton btnthGrade = new JButton("4th Grade");
+		btnthGrade.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TopicSelect topic = new TopicSelect();
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
+				dispose();
+			}
+		});
+		btnthGrade.setFont(new Font("Arial", Font.BOLD, 12));
+		btnthGrade.setBounds(105, 191, 108, 39);
+		getContentPane().add(btnthGrade);
+		
+		JButton btnthGrade_1 = new JButton("5th Grade");
+		btnthGrade_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TopicSelect topic = new TopicSelect();
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
+				dispose();
+			}
+		});
+		btnthGrade_1.setFont(new Font("Arial", Font.BOLD, 12));
+		btnthGrade_1.setBounds(247, 192, 108, 39);
+		getContentPane().add(btnthGrade_1);
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(200, 200, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
