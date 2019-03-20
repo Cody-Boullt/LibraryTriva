@@ -46,7 +46,7 @@ public class Difficulty extends JFrame {
 		
 		JLabel lblDifficulty = new JLabel("What grade are you in?");
 		lblDifficulty.setFont(new Font("Arial", Font.BOLD, 12));
-		lblDifficulty.setBounds(24, 54, 147, 24);
+		lblDifficulty.setBounds(143, 55, 147, 24);
 		getContentPane().add(lblDifficulty);
 		
 		JButton btnEasy = new JButton("1st Grade");
@@ -60,7 +60,7 @@ public class Difficulty extends JFrame {
 			}
 		});
 		btnEasy.setFont(new Font("Arial", Font.BOLD, 12));
-		btnEasy.setBounds(247, 90, 108, 39);
+		btnEasy.setBounds(234, 90, 108, 39);
 		getContentPane().add(btnEasy);
 		
 		JButton btnMedium = new JButton("Kindergarten");
@@ -74,7 +74,7 @@ public class Difficulty extends JFrame {
 			}
 		});
 		btnMedium.setFont(new Font("Arial", Font.BOLD, 12));
-		btnMedium.setBounds(105, 90, 108, 39);
+		btnMedium.setBounds(92, 90, 108, 39);
 		getContentPane().add(btnMedium);
 		
 		JButton btnHard = new JButton("2nd Grade");
@@ -88,7 +88,7 @@ public class Difficulty extends JFrame {
 			}
 		});
 		btnHard.setFont(new Font("Arial", Font.BOLD, 12));
-		btnHard.setBounds(105, 141, 108, 38);
+		btnHard.setBounds(92, 141, 108, 38);
 		getContentPane().add(btnHard);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -140,7 +140,7 @@ public class Difficulty extends JFrame {
 			}
 		});
 		btnrdGrade.setFont(new Font("Arial", Font.BOLD, 12));
-		btnrdGrade.setBounds(247, 142, 108, 39);
+		btnrdGrade.setBounds(234, 142, 108, 39);
 		getContentPane().add(btnrdGrade);
 		
 		JButton btnthGrade = new JButton("4th Grade");
@@ -154,7 +154,7 @@ public class Difficulty extends JFrame {
 			}
 		});
 		btnthGrade.setFont(new Font("Arial", Font.BOLD, 12));
-		btnthGrade.setBounds(105, 191, 108, 39);
+		btnthGrade.setBounds(92, 191, 108, 39);
 		getContentPane().add(btnthGrade);
 		
 		JButton btnthGrade_1 = new JButton("5th Grade");
@@ -168,7 +168,7 @@ public class Difficulty extends JFrame {
 			}
 		});
 		btnthGrade_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnthGrade_1.setBounds(247, 192, 108, 39);
+		btnthGrade_1.setBounds(234, 192, 108, 39);
 		getContentPane().add(btnthGrade_1);
 		initialize();
 	}
