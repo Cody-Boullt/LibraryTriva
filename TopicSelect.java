@@ -51,7 +51,7 @@ public class TopicSelect extends JFrame {
 		
 		JLabel lblChooseATopic = new JLabel("Choose a topic:");
 		lblChooseATopic.setFont(new Font("Arial", Font.BOLD, 12));
-		lblChooseATopic.setBounds(171, 72, 91, 27);
+		lblChooseATopic.setBounds(168, 67, 91, 27);
 		getContentPane().add(lblChooseATopic);
 		
 		JButton btnEnglish = new JButton("English");
@@ -65,7 +65,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnEnglish.setFont(new Font("Arial", Font.BOLD, 12));
-		btnEnglish.setBounds(67, 105, 90, 28);
+		btnEnglish.setBounds(79, 105, 108, 39);
 		getContentPane().add(btnEnglish);
 		
 		JButton btnMath = new JButton("Math");
@@ -79,7 +79,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnMath.setFont(new Font("Arial", Font.BOLD, 12));
-		btnMath.setBounds(67, 191, 90, 28);
+		btnMath.setBounds(79, 180, 108, 39);
 		getContentPane().add(btnMath);
 		
 		JButton btnScience = new JButton("Science");
@@ -93,7 +93,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnScience.setFont(new Font("Arial", Font.BOLD, 12));
-		btnScience.setBounds(273, 105, 90, 28);
+		btnScience.setBounds(244, 105, 108, 39);
 		getContentPane().add(btnScience);
 		
 		JButton btnHistory = new JButton("History");
@@ -107,7 +107,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnHistory.setFont(new Font("Arial", Font.BOLD, 12));
-		btnHistory.setBounds(273, 191, 90, 28);
+		btnHistory.setBounds(244, 180, 108, 39);
 		getContentPane().add(btnHistory);
 		
 		JMenuBar menuBar = new JMenuBar();
