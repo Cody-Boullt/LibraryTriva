@@ -448,47 +448,90 @@ public class AnswerArray {
 		
 		
 		// 3rd grade math
-		wrongAnswers[15][0][0] = "6";
-		wrongAnswers[15][0][1] = "6";
-		wrongAnswers[15][0][2] = "6";
+		wrongAnswers[15][0][0] = "5";
+		wrongAnswers[15][0][1] = "7";
+		wrongAnswers[15][0][2] = "8";
 		
-		wrongAnswers[16][0][0] = "0";
-		wrongAnswers[16][0][1] = "0";
-		wrongAnswers[16][0][2] = "0";
+		wrongAnswers[16][0][0] = "11";
+		wrongAnswers[16][0][1] = "1";
+		wrongAnswers[16][0][2] = "10";
 		
-		wrongAnswers[17][0][0] = "40";
-		wrongAnswers[17][0][1] = "40";
-		wrongAnswers[17][0][2] = "40";
+		wrongAnswers[17][0][0] = "10";
+		wrongAnswers[17][0][1] = "4";
+		wrongAnswers[17][0][2] = "0";
 		
-		wrongAnswers[18][0][0] = "20";
-		wrongAnswers[18][0][1] = "20";
-		wrongAnswers[18][0][2] = "20";
+		wrongAnswers[18][0][0] = "9";
+		wrongAnswers[18][0][1] = "10";
+		wrongAnswers[18][0][2] = "19";
 		
-		wrongAnswers[19][0][0] = "487";
-		wrongAnswers[19][0][1] = "487";
-		wrongAnswers[19][0][2] = "487";
+		wrongAnswers[19][0][0] = "243";
+		wrongAnswers[19][0][1] = "500";
+		wrongAnswers[19][0][2] = "378";
 		
 		
 		// 3rd grade science
-		answers[15][1] = "Earth";
-		answers[16][1] = "Copper";
-		answers[17][1] = "Saturn";
-		answers[18][1] = "Octopus";
-		answers[19][1] = "Turtle";
+		wrongAnswers[15][1][0] = "Mars";
+		wrongAnswers[15][1][1] = "America";
+		wrongAnswers[15][1][2] = "Virginia";
+		
+		wrongAnswers[16][1][0] = "Metal";
+		wrongAnswers[16][1][1] = "Bronze";
+		wrongAnswers[16][1][2] = "Pen";
+		
+		wrongAnswers[17][1][0] = "Jupiter";
+		wrongAnswers[17][1][1] = "Mars";
+		wrongAnswers[17][1][2] = "Venus";
+		
+		wrongAnswers[18][1][0] = "Blue Jay";
+		wrongAnswers[18][1][1] = "Dog";
+		wrongAnswers[18][1][2] = "Elephant";
+		
+		wrongAnswers[19][1][0] = "Bee";
+		wrongAnswers[19][1][1] = "Butterfly";
+		wrongAnswers[19][1][2] = "Ant";
+		
 		
 		// 3rd grade history
-		answers[15][2] = "Abraham Lincoln";
-		answers[16][2] = "Abraham Lincoln";
-		answers[17][2] = "Richmond";
-		answers[18][2] = "John Adams";
-		answers[19][2] = "Alaska";
+		wrongAnswers[15][2][0] = "George Washington";
+		wrongAnswers[15][2][1] = "Theodore Roosevelt";
+		wrongAnswers[15][2][2] = "Jimmy Carter";
+		
+		wrongAnswers[16][2][0] = "George Washington";
+		wrongAnswers[16][2][1] = "Thomas Jefferson";
+		wrongAnswers[16][2][2] = "Benjamin Franklin";
+		
+		wrongAnswers[17][2][0] = "Virginia Beach";
+		wrongAnswers[17][2][1] = "Hampton";
+		wrongAnswers[17][2][2] = "D.C.";
+		
+		wrongAnswers[18][2][0] = "James Madison";
+		wrongAnswers[18][2][1] = "Thomas Jefferson";
+		wrongAnswers[18][2][2] = "Benjamin Franklin";
+		
+		wrongAnswers[19][2][0] = "Hawii";
+		wrongAnswers[19][2][1] = "Washington";
+		wrongAnswers[19][2][2] = "Main";
 		
 		// 3rd grade English
-		answers[15][3] = "Cacti";
-		answers[16][3] = "she";
-		answers[17][3] = "their";
-		answers[18][3] = "too";
-		answers[19][3] = "They're";
+		wrongAnswers[15][3][0] = "Cactuses";
+		wrongAnswers[15][3][1] = "Cactus";
+		wrongAnswers[15][3][2] = "Cacties";
+		
+		wrongAnswers[16][3][0] = "her";
+		wrongAnswers[16][3][1] = "me";
+		wrongAnswers[16][3][2] = "us";
+		
+		wrongAnswers[17][3][0] = "us";
+		wrongAnswers[17][3][1] = "he";
+		wrongAnswers[17][3][2] = "she";
+		
+		wrongAnswers[18][3][0] = "to";
+		wrongAnswers[18][3][1] = "two";
+		wrongAnswers[18][3][2] = "2";
+		
+		wrongAnswers[19][3][0] = "Their";
+		wrongAnswers[19][3][1] = "There";
+		wrongAnswers[19][3][2] = "Thare";
 		
 		// 4th grade math
 		answers[20][0] = "4/7";
