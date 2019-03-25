@@ -1,7 +1,7 @@
 /*
  * Team Compilation
  * Cody Boullt, Richard Creech, Alexandre Hoppe
- * 03/04/2019
+ * 03/26/2019
  */
 
 import javax.swing.JFrame;
@@ -40,6 +40,7 @@ public class Launcher extends JFrame{
 	 * Create the application.
 	 */
 	public Launcher() {
+		QuestionArray.fillArray();
 		initialize();
 	}
 
