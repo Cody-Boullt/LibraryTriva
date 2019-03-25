@@ -45,13 +45,13 @@ public class TopicSelect extends JFrame {
 		getContentPane().setLayout(null);
 		
 		JLabel lblLibraryCenter = new JLabel("Library Center");
-		lblLibraryCenter.setFont(new Font("Arial", Font.BOLD, 12));
-		lblLibraryCenter.setBounds(175, 44, 84, 16);
+		lblLibraryCenter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 14));
+		lblLibraryCenter.setBounds(156, 34, 103, 26);
 		getContentPane().add(lblLibraryCenter);
 		
 		JLabel lblChooseATopic = new JLabel("Choose a topic:");
-		lblChooseATopic.setFont(new Font("Arial", Font.BOLD, 12));
-		lblChooseATopic.setBounds(171, 72, 91, 27);
+		lblChooseATopic.setFont(new Font("Eras Bold ITC", Font.PLAIN, 14));
+		lblChooseATopic.setBounds(156, 67, 113, 27);
 		getContentPane().add(lblChooseATopic);
 		
 		JButton btnEnglish = new JButton("Math");
@@ -134,7 +134,7 @@ public class TopicSelect extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				HowToPlay howTo = new HowToPlay();
 				howTo.setLocation( 250, 150 );
-				howTo.setSize( 450, 300 );
+				howTo.setSize( 364, 161 );
 				howTo.setVisible(true);
 			}
 		});
