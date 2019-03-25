@@ -309,6 +309,9 @@ public class QuestionArray {
 			col = 3;
 		}
 		
+		AnswerArray.setAnsArray(row, col);
+		AnswerArray.setWrgArray(row, col);
+		
 		String questPass = questions[row][col];
 		
 		return questPass;
