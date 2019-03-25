@@ -7,6 +7,7 @@
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import java.awt.Font;
@@ -41,6 +42,8 @@ public class Launcher extends JFrame{
 	 */
 	public Launcher() {
 		QuestionArray.fillArray();
+		AnswerArray.fillArray();
+		AnswerArray.fillFalseArray();
 		initialize();
 	}
 
@@ -49,15 +52,19 @@ public class Launcher extends JFrame{
 	 */
 	private void initialize() {
 		frmLibraryTriviaCenter = new JFrame();
+		frmLibraryTriviaCenter.setResizable(false);
 		frmLibraryTriviaCenter.setTitle("Main Menu");
 		frmLibraryTriviaCenter.setBounds(200, 200, 450, 300);
 		frmLibraryTriviaCenter.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLibraryTriviaCenter.getContentPane().setLayout(null);
 		
+		JLabel background = new JLabel();
+		ImageIcon img = new ImageIcon("img/MainMenu.png");
+		
 		JLabel lblNewLabel = new JLabel("Welcome to the Library Trivia Center!");
-		lblNewLabel.setBounds(10, 11, 414, 24);
-		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setFont(new Font("Eras Bold ITC", Font.PLAIN, 20));
+		lblNewLabel.setBounds(10, 22, 424, 24);
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setFont(new Font("Eras Bold ITC", Font.PLAIN, 22));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		frmLibraryTriviaCenter.getContentPane().add(lblNewLabel);
 		
@@ -72,7 +79,7 @@ public class Launcher extends JFrame{
 				frmLibraryTriviaCenter.dispose();
 			}
 		});
-		btnNewGame.setBounds(169, 84, 95, 23);
+		btnNewGame.setBounds(166, 84, 111, 23);
 		frmLibraryTriviaCenter.getContentPane().add(btnNewGame);
 		
 		JButton btnHowToPlay = new JButton("How To Play");
@@ -85,7 +92,7 @@ public class Launcher extends JFrame{
 				howTo.setVisible(true);
 			}
 		});
-		btnHowToPlay.setBounds(162, 119, 110, 23);
+		btnHowToPlay.setBounds(166, 119, 111, 23);
 		frmLibraryTriviaCenter.getContentPane().add(btnHowToPlay);
 		
 		JButton btnQuitGame = new JButton("Quit Game");
@@ -95,8 +102,12 @@ public class Launcher extends JFrame{
 				frmLibraryTriviaCenter.dispose();
 			}
 		});
-		btnQuitGame.setBounds(169, 154, 95, 23);
+		btnQuitGame.setBounds(166, 154, 111, 23);
 		frmLibraryTriviaCenter.getContentPane().add(btnQuitGame);
+		background = new JLabel("", img, JLabel.CENTER);
+		background.setSize(450, 300);
+		background.setBounds(0, 0, 444, 272);
+		frmLibraryTriviaCenter.getContentPane().add(background);
 	}
 
 }
