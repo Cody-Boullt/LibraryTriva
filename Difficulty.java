@@ -1,7 +1,7 @@
 /*
  * Team Compilation
  * Cody Boullt, Richard Creech, Alexandre Hoppe
- * 03/04/2019
+ * 03/26/2019
  */
 
 import java.awt.Font;
@@ -46,50 +46,53 @@ public class Difficulty extends JFrame {
 		
 		JLabel lblDifficulty = new JLabel("What grade are you in?");
 		lblDifficulty.setFont(new Font("Arial", Font.BOLD, 12));
-		lblDifficulty.setBounds(143, 55, 147, 24);
+		lblDifficulty.setBounds(24, 54, 147, 24);
 		getContentPane().add(lblDifficulty);
 		
-		JButton btnEasy = new JButton("1st Grade");
-		btnEasy.addActionListener(new ActionListener() {
+		JButton btnOne = new JButton("1st Grade");
+		btnOne.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				TopicSelect topic = new TopicSelect();
+				String grade = "1";
+				TopicSelect topic = new TopicSelect(grade);
 				topic.setLocation( 200, 200 );
 				topic.setSize( 450, 300 );
 				topic.setVisible(true);
 				dispose();
 			}
 		});
-		btnEasy.setFont(new Font("Arial", Font.BOLD, 12));
-		btnEasy.setBounds(234, 90, 108, 39);
-		getContentPane().add(btnEasy);
+		btnOne.setFont(new Font("Arial", Font.BOLD, 12));
+		btnOne.setBounds(247, 90, 108, 39);
+		getContentPane().add(btnOne);
 		
-		JButton btnMedium = new JButton("Kindergarten");
-		btnMedium.addActionListener(new ActionListener() {
+		JButton btnKin = new JButton("Kindergarten");
+		btnKin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TopicSelect topic = new TopicSelect();
+				String grade = "K";
+				TopicSelect topic = new TopicSelect(grade);
 				topic.setLocation( 200, 200 );
 				topic.setSize( 450, 300 );
 				topic.setVisible(true);
 				dispose();
 			}
 		});
-		btnMedium.setFont(new Font("Arial", Font.BOLD, 12));
-		btnMedium.setBounds(92, 90, 108, 39);
-		getContentPane().add(btnMedium);
+		btnKin.setFont(new Font("Arial", Font.BOLD, 12));
+		btnKin.setBounds(105, 90, 108, 39);
+		getContentPane().add(btnKin);
 		
-		JButton btnHard = new JButton("2nd Grade");
-		btnHard.addActionListener(new ActionListener() {
+		JButton btnTwo = new JButton("2nd Grade");
+		btnTwo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TopicSelect topic = new TopicSelect();
+				String grade = "2";
+				TopicSelect topic = new TopicSelect(grade);
 				topic.setLocation( 200, 200 );
 				topic.setSize( 450, 300 );
 				topic.setVisible(true);
 				dispose();
 			}
 		});
-		btnHard.setFont(new Font("Arial", Font.BOLD, 12));
-		btnHard.setBounds(92, 141, 108, 38);
-		getContentPane().add(btnHard);
+		btnTwo.setFont(new Font("Arial", Font.BOLD, 12));
+		btnTwo.setBounds(105, 141, 108, 38);
+		getContentPane().add(btnTwo);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 434, 23);
@@ -129,47 +132,50 @@ public class Difficulty extends JFrame {
 		});
 		mnHelp.add(mntmHowToPlay);
 		
-		JButton btnrdGrade = new JButton("3rd Grade");
-		btnrdGrade.addActionListener(new ActionListener() {
+		JButton btnThree = new JButton("3rd Grade");
+		btnThree.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TopicSelect topic = new TopicSelect();
+				String grade = "3";
+				TopicSelect topic = new TopicSelect(grade);
 				topic.setLocation( 200, 200 );
 				topic.setSize( 450, 300 );
 				topic.setVisible(true);
 				dispose();
 			}
 		});
-		btnrdGrade.setFont(new Font("Arial", Font.BOLD, 12));
-		btnrdGrade.setBounds(234, 142, 108, 39);
-		getContentPane().add(btnrdGrade);
+		btnThree.setFont(new Font("Arial", Font.BOLD, 12));
+		btnThree.setBounds(247, 142, 108, 39);
+		getContentPane().add(btnThree);
 		
-		JButton btnthGrade = new JButton("4th Grade");
-		btnthGrade.addActionListener(new ActionListener() {
+		JButton btnFour = new JButton("4th Grade");
+		btnFour.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TopicSelect topic = new TopicSelect();
+				String grade = "4";
+				TopicSelect topic = new TopicSelect(grade);
 				topic.setLocation( 200, 200 );
 				topic.setSize( 450, 300 );
 				topic.setVisible(true);
 				dispose();
 			}
 		});
-		btnthGrade.setFont(new Font("Arial", Font.BOLD, 12));
-		btnthGrade.setBounds(92, 191, 108, 39);
-		getContentPane().add(btnthGrade);
+		btnFour.setFont(new Font("Arial", Font.BOLD, 12));
+		btnFour.setBounds(105, 191, 108, 39);
+		getContentPane().add(btnFour);
 		
-		JButton btnthGrade_1 = new JButton("5th Grade");
-		btnthGrade_1.addActionListener(new ActionListener() {
+		JButton btnFive = new JButton("5th Grade");
+		btnFive.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				TopicSelect topic = new TopicSelect();
+				String grade = "5";
+				TopicSelect topic = new TopicSelect(grade);
 				topic.setLocation( 200, 200 );
 				topic.setSize( 450, 300 );
 				topic.setVisible(true);
 				dispose();
 			}
 		});
-		btnthGrade_1.setFont(new Font("Arial", Font.BOLD, 12));
-		btnthGrade_1.setBounds(234, 192, 108, 39);
-		getContentPane().add(btnthGrade_1);
+		btnFive.setFont(new Font("Arial", Font.BOLD, 12));
+		btnFive.setBounds(247, 192, 108, 39);
+		getContentPane().add(btnFive);
 		initialize();
 	}
 
