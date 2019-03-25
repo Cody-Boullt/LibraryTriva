@@ -1,21 +1,21 @@
 /*
  * Team Compilation
  * Cody Boullt, Richard Creech, Alexandre Hoppe
- * 03/04/2019
+ * 03/26/2019
  */
 
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.Random;
-import java.io.*;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class Question extends JFrame {
@@ -25,11 +25,11 @@ public class Question extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String grade, String topic) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Question window = new Question();
+					Question window = new Question(grade, topic);
 					window.frmQuestion.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,48 +40,80 @@ public class Question extends JFrame {
 
 	/**
 	 * Create the application.
+	 * @param topic 
+	 * @param grade 
+	 * @param questions 
 	 */
-	public Question() {
-		setTitle("Trivia");
-		getContentPane().setLayout(null);
+	public Question(String grade, String topic) {
+		initialize(grade, topic);
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 * @param topic 
+	 * @param grade 
+	 */
+	private void initialize(String grade, String topic) {
+		String questPassed = QuestionArray.getQuestArray(grade, topic);
 		
-		JLabel lblQuestionHere = new JLabel("What State do you live in?");
+		frmQuestion = new JFrame();
+		frmQuestion.setTitle("Trivia");
+		frmQuestion.setBounds(200, 200, 450, 300);
+		frmQuestion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmQuestion.getContentPane().setLayout(null);
+		
+		JLabel lblQuestionHere = new JLabel(questPassed, SwingConstants.CENTER);
 		lblQuestionHere.setFont(new Font("Arial", Font.BOLD, 12));
-		lblQuestionHere.setBounds(151, 42, 200, 27);
-		getContentPane().add(lblQuestionHere);
+		lblQuestionHere.setBounds(10, 42, 412, 27);
+		frmQuestion.getContentPane().add(lblQuestionHere);
 		
-		JButton btnAnswer = new JButton("Alaska");
+		JButton btnAnswer = new JButton("Answer 1");
 		btnAnswer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Answer results = new Answer();
-				results.setLocation( 200, 200 );
-				results.setSize( 450, 300 );
-				results.setVisible(true);
-				dispose();
+				Answer.main(null);
+				frmQuestion.dispose();
 			}
 		});
 		btnAnswer.setFont(new Font("Arial", Font.BOLD, 12));
 		btnAnswer.setBounds(53, 80, 147, 75);
-		getContentPane().add(btnAnswer);
+		frmQuestion.getContentPane().add(btnAnswer);
 		
-		JButton btnAnswer_1 = new JButton("Virginia");
+		JButton btnAnswer_1 = new JButton("Answer 2");
+		btnAnswer_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Answer.main(null);
+				frmQuestion.dispose();
+			}
+		});
 		btnAnswer_1.setFont(new Font("Arial", Font.BOLD, 12));
 		btnAnswer_1.setBounds(233, 80, 147, 75);
-		getContentPane().add(btnAnswer_1);
+		frmQuestion.getContentPane().add(btnAnswer_1);
 		
-		JButton btnAnswer_2 = new JButton("West Virginia");
+		JButton btnAnswer_2 = new JButton("Answer 3");
+		btnAnswer_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Answer.main(null);
+				frmQuestion.dispose();
+			}
+		});
 		btnAnswer_2.setFont(new Font("Arial", Font.BOLD, 12));
 		btnAnswer_2.setBounds(53, 175, 147, 75);
-		getContentPane().add(btnAnswer_2);
+		frmQuestion.getContentPane().add(btnAnswer_2);
 		
-		JButton btnAnswer_3 = new JButton("Maryland");
+		JButton btnAnswer_3 = new JButton("Answer 4");
+		btnAnswer_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Answer.main(null);
+				frmQuestion.dispose();
+			}
+		});
 		btnAnswer_3.setFont(new Font("Arial", Font.BOLD, 12));
 		btnAnswer_3.setBounds(233, 175, 147, 75);
-		getContentPane().add(btnAnswer_3);
+		frmQuestion.getContentPane().add(btnAnswer_3);
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setBounds(0, 0, 434, 23);
-		getContentPane().add(menuBar);
+		frmQuestion.getContentPane().add(menuBar);
 		
 		JMenu menu = new JMenu("File");
 		menuBar.add(menu);
@@ -90,7 +122,7 @@ public class Question extends JFrame {
 		menuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Launcher.main(null);
-				dispose();
+				frmQuestion.dispose();
 			}
 		});
 		menu.add(menuItem);
@@ -98,7 +130,7 @@ public class Question extends JFrame {
 		JMenuItem menuItem_1 = new JMenuItem("Quit");
 		menuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				frmQuestion.dispose();
 			}
 		});
 		menu.add(menuItem_1);
@@ -116,15 +148,5 @@ public class Question extends JFrame {
 			}
 		});
 		menu_1.add(menuItem_2);
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frmQuestion = new JFrame();
-		frmQuestion.setBounds(100, 100, 450, 300);
-		frmQuestion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
