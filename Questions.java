@@ -81,8 +81,8 @@ public class Question extends JFrame {
 		JButton btnAnswer_1 = new JButton(answerOne);
 		btnAnswer_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//String choice = answerOne;
-				Answer.main(grade, topic/*, choice*/);
+				String choice = answerOne;
+				Answer.main(grade, topic, questPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -94,7 +94,8 @@ public class Question extends JFrame {
 		JButton btnAnswer_2 = new JButton(answerTwo);
 		btnAnswer_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Answer.main(grade, topic);
+				String choice = answerTwo;
+				Answer.main(grade, topic, questPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -105,7 +106,8 @@ public class Question extends JFrame {
 		JButton btnAnswer_3 = new JButton(answerThree);
 		btnAnswer_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Answer.main(grade, topic);
+				String choice = answerThree;
+				Answer.main(grade, topic, questPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -116,7 +118,8 @@ public class Question extends JFrame {
 		JButton btnAnswer_4 = new JButton(answerFour);
 		btnAnswer_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Answer.main(grade, topic);
+				String choice = answerFour;
+				Answer.main(grade, topic, questPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
