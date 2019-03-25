@@ -14,6 +14,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JLabel;
+import javax.swing.JButton;
 
 @SuppressWarnings("serial")
 public class Answer extends JFrame {
@@ -24,11 +25,11 @@ public class Answer extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String grade, String topic) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Answer window = new Answer();
+					Answer window = new Answer(grade, topic);
 					window.frmAnswer.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,14 +41,14 @@ public class Answer extends JFrame {
 	/**
 	 * Create the application.
 	 */
-	public Answer() {
-		initialize();
+	public Answer(String grade, String topic) {
+		initialize(grade, topic);
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize(String grade, String topic) {
 		frmAnswer = new JFrame();
 		frmAnswer.setTitle("Results");
 		frmAnswer.setBounds(200, 200, 450, 300);
@@ -84,25 +85,50 @@ public class Answer extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				HowToPlay howTo = new HowToPlay();
 				howTo.setLocation( 250, 150 );
-				howTo.setSize( 450, 300 );
+				howTo.setSize( 364, 161 );
 				howTo.setVisible(true);
 			}
 		});
 		menu_1.add(menuItem_2);
 		frmAnswer.getContentPane().setLayout(null);
-		lblCorrectincorrect.setBounds(143, 58, 148, 31);
+		lblCorrectincorrect.setBounds(131, 29, 165, 31);
 		frmAnswer.getContentPane().add(lblCorrectincorrect);
-		lblCorrectincorrect.setFont(new Font("Arial", Font.BOLD, 18));
+		lblCorrectincorrect.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		
-		JLabel label = new JLabel("Score:");
-		label.setFont(new Font("Arial", Font.BOLD, 18));
-		label.setBounds(143, 112, 143, 48);
-		frmAnswer.getContentPane().add(label);
+		JLabel labelScore = new JLabel("Score:");
+		labelScore.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		labelScore.setBounds(131, 107, 63, 31);
+		frmAnswer.getContentPane().add(labelScore);
+		
+		JLabel lblScoreCounter = new JLabel("X");
+		lblScoreCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblScoreCounter.setBounds(197, 107, 112, 31);
+		frmAnswer.getContentPane().add(lblScoreCounter);
+		
 		
 		JLabel lblStrikes = new JLabel("Strikes:");
-		lblStrikes.setFont(new Font("Arial", Font.BOLD, 18));
-		lblStrikes.setBounds(143, 145, 143, 48);
+		lblStrikes.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblStrikes.setBounds(131, 141, 75, 31);
 		frmAnswer.getContentPane().add(lblStrikes);
+		
+		JButton buttonContinue = new JButton("Continue");
+		buttonContinue.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TopicSelect topic = new TopicSelect(grade);
+				topic.setLocation( 200, 200 );
+				topic.setSize( 450, 300 );
+				topic.setVisible(true);
+				frmAnswer.dispose();
+				dispose();
+			}
+		});
+		
+		JLabel lblStrikeCounter = new JLabel("X");
+		lblStrikeCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblStrikeCounter.setBounds(207, 141, 103, 31);
+		frmAnswer.getContentPane().add(lblStrikeCounter);
+		buttonContinue.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		buttonContinue.setBounds(141, 191, 134, 28);
+		frmAnswer.getContentPane().add(buttonContinue);
 	}
-
 }
