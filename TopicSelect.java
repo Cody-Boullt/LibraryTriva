@@ -1,10 +1,9 @@
 /*
  * Team Compilation
  * Cody Boullt, Richard Creech, Alexandre Hoppe
- * 03/04/2019
+ * 03/26/2019
  */
 
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -23,8 +22,8 @@ public class TopicSelect extends JFrame {
 
 	/**
 	 * Launch the application.
-	 */
-	public static void main(String[] args) {
+	
+	/*public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -35,12 +34,13 @@ public class TopicSelect extends JFrame {
 				}
 			}
 		});
-	}
+	}*/
 
 	/**
 	 * Create the application.
+	 * @param grade 
 	 */
-	public TopicSelect() {
+	public TopicSelect(String grade) {
 		setTitle("Topic Selection");
 		getContentPane().setLayout(null);
 		
@@ -51,63 +51,55 @@ public class TopicSelect extends JFrame {
 		
 		JLabel lblChooseATopic = new JLabel("Choose a topic:");
 		lblChooseATopic.setFont(new Font("Arial", Font.BOLD, 12));
-		lblChooseATopic.setBounds(168, 67, 91, 27);
+		lblChooseATopic.setBounds(171, 72, 91, 27);
 		getContentPane().add(lblChooseATopic);
 		
-		JButton btnEnglish = new JButton("English");
+		JButton btnEnglish = new JButton("Math");
 		btnEnglish.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Question english = new Question();
-				english.setLocation( 200, 200 );
-				english.setSize( 450, 300 );
-				english.setVisible(true);
+				String topic = "math";
+				Question.main(grade, topic);
 				dispose();
 			}
 		});
 		btnEnglish.setFont(new Font("Arial", Font.BOLD, 12));
-		btnEnglish.setBounds(79, 105, 108, 39);
+		btnEnglish.setBounds(67, 105, 90, 28);
 		getContentPane().add(btnEnglish);
 		
-		JButton btnMath = new JButton("Math");
+		JButton btnMath = new JButton("Science");
 		btnMath.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Question math = new Question();
-				math.setLocation( 200, 200 );
-				math.setSize( 450, 300 );
-				math.setVisible(true);
+				String topic = "science";
+				Question.main(grade, topic);
 				dispose();
 			}
 		});
 		btnMath.setFont(new Font("Arial", Font.BOLD, 12));
-		btnMath.setBounds(79, 180, 108, 39);
+		btnMath.setBounds(67, 191, 90, 28);
 		getContentPane().add(btnMath);
 		
-		JButton btnScience = new JButton("Science");
+		JButton btnScience = new JButton("History");
 		btnScience.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Question science = new Question();
-				science.setLocation( 200, 200 );
-				science.setSize( 450, 300 );
-				science.setVisible(true);
+				String topic = "history";
+				Question.main(grade, topic);
 				dispose();
 			}
 		});
 		btnScience.setFont(new Font("Arial", Font.BOLD, 12));
-		btnScience.setBounds(244, 105, 108, 39);
+		btnScience.setBounds(273, 105, 90, 28);
 		getContentPane().add(btnScience);
 		
-		JButton btnHistory = new JButton("History");
+		JButton btnHistory = new JButton("English");
 		btnHistory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Question history = new Question();
-				history.setLocation( 200, 200 );
-				history.setSize( 450, 300 );
-				history.setVisible(true);
+				String topic = "english";
+				Question.main(grade, topic);
 				dispose();
 			}
 		});
 		btnHistory.setFont(new Font("Arial", Font.BOLD, 12));
-		btnHistory.setBounds(244, 180, 108, 39);
+		btnHistory.setBounds(273, 191, 90, 28);
 		getContentPane().add(btnHistory);
 		
 		JMenuBar menuBar = new JMenuBar();
