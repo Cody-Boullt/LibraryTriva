@@ -1,7 +1,7 @@
 /*
  * Team Compilation
  * Cody Boullt, Richard Creech, Alexandre Hoppe
- * 03/04/2019
+ * 03/26/2019
  */
 
 import java.awt.EventQueue;
@@ -68,7 +68,7 @@ public class GameOver extends JFrame {
 		menuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Launcher.main(null);
-				dispose();
+				frmGameOver.dispose();
 			}
 		});
 		menu.add(menuItem);
@@ -76,7 +76,7 @@ public class GameOver extends JFrame {
 		JMenuItem menuItem_1 = new JMenuItem("Quit");
 		menuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				frmGameOver.dispose();
 			}
 		});
 		menu.add(menuItem_1);
