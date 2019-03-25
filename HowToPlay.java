@@ -8,6 +8,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class HowToPlay extends JFrame {
@@ -37,8 +39,10 @@ public class HowToPlay extends JFrame {
 		setTitle("How to Play");
 		getContentPane().setLayout(null);
 		
-		JLabel lblInstructionsHere = new JLabel("Instructions here");
-		lblInstructionsHere.setBounds(167, 44, 99, 30);
+		JLabel lblInstructionsHere = new JLabel("<html><body><center>Use your mouse or keyboard to select your grade level and the subject you want to play. <br><br>Questions are multiple choice and with each correct answer you build up a score. Three incorrect answers and game over!</center></body></html>");
+		lblInstructionsHere.setHorizontalAlignment(SwingConstants.LEFT);
+		lblInstructionsHere.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		lblInstructionsHere.setBounds(10, 11, 329, 101);
 		getContentPane().add(lblInstructionsHere);
 		initialize();
 	}
