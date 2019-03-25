@@ -45,8 +45,8 @@ public class Difficulty extends JFrame {
 		getContentPane().setLayout(null);
 		
 		JLabel lblDifficulty = new JLabel("What grade are you in?");
-		lblDifficulty.setFont(new Font("Arial", Font.BOLD, 12));
-		lblDifficulty.setBounds(24, 54, 147, 24);
+		lblDifficulty.setFont(new Font("Eras Bold ITC", Font.PLAIN, 14));
+		lblDifficulty.setBounds(24, 54, 221, 24);
 		getContentPane().add(lblDifficulty);
 		
 		JButton btnOne = new JButton("1st Grade");
@@ -60,8 +60,8 @@ public class Difficulty extends JFrame {
 				dispose();
 			}
 		});
-		btnOne.setFont(new Font("Arial", Font.BOLD, 12));
-		btnOne.setBounds(247, 90, 108, 39);
+		btnOne.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		btnOne.setBounds(247, 90, 119, 39);
 		getContentPane().add(btnOne);
 		
 		JButton btnKin = new JButton("Kindergarten");
@@ -75,8 +75,8 @@ public class Difficulty extends JFrame {
 				dispose();
 			}
 		});
-		btnKin.setFont(new Font("Arial", Font.BOLD, 12));
-		btnKin.setBounds(105, 90, 108, 39);
+		btnKin.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		btnKin.setBounds(94, 90, 119, 39);
 		getContentPane().add(btnKin);
 		
 		JButton btnTwo = new JButton("2nd Grade");
@@ -90,8 +90,8 @@ public class Difficulty extends JFrame {
 				dispose();
 			}
 		});
-		btnTwo.setFont(new Font("Arial", Font.BOLD, 12));
-		btnTwo.setBounds(105, 141, 108, 38);
+		btnTwo.setFont(new Font("Eras Bold ITC", Font.PLAIN, 11));
+		btnTwo.setBounds(94, 141, 119, 38);
 		getContentPane().add(btnTwo);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -126,7 +126,7 @@ public class Difficulty extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				HowToPlay howTo = new HowToPlay();
 				howTo.setLocation( 250, 150 );
-				howTo.setSize( 450, 300 );
+				howTo.setSize( 364, 161 );
 				howTo.setVisible(true);
 			}
 		});
@@ -143,8 +143,8 @@ public class Difficulty extends JFrame {
 				dispose();
 			}
 		});
-		btnThree.setFont(new Font("Arial", Font.BOLD, 12));
-		btnThree.setBounds(247, 142, 108, 39);
+		btnThree.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		btnThree.setBounds(247, 142, 119, 39);
 		getContentPane().add(btnThree);
 		
 		JButton btnFour = new JButton("4th Grade");
@@ -158,8 +158,8 @@ public class Difficulty extends JFrame {
 				dispose();
 			}
 		});
-		btnFour.setFont(new Font("Arial", Font.BOLD, 12));
-		btnFour.setBounds(105, 191, 108, 39);
+		btnFour.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		btnFour.setBounds(94, 191, 119, 39);
 		getContentPane().add(btnFour);
 		
 		JButton btnFive = new JButton("5th Grade");
@@ -173,8 +173,8 @@ public class Difficulty extends JFrame {
 				dispose();
 			}
 		});
-		btnFive.setFont(new Font("Arial", Font.BOLD, 12));
-		btnFive.setBounds(247, 192, 108, 39);
+		btnFive.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		btnFive.setBounds(247, 192, 119, 39);
 		getContentPane().add(btnFive);
 		initialize();
 	}
