@@ -62,7 +62,7 @@ public class TopicSelect extends JFrame {
 				dispose();
 			}
 		});
-		btnEnglish.setFont(new Font("Arial", Font.BOLD, 12));
+		btnEnglish.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		btnEnglish.setBounds(67, 105, 90, 28);
 		getContentPane().add(btnEnglish);
 		
@@ -74,7 +74,7 @@ public class TopicSelect extends JFrame {
 				dispose();
 			}
 		});
-		btnMath.setFont(new Font("Arial", Font.BOLD, 12));
+		btnMath.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		btnMath.setBounds(67, 191, 90, 28);
 		getContentPane().add(btnMath);
 		
@@ -86,7 +86,7 @@ public class TopicSelect extends JFrame {
 				dispose();
 			}
 		});
-		btnScience.setFont(new Font("Arial", Font.BOLD, 12));
+		btnScience.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		btnScience.setBounds(273, 105, 90, 28);
 		getContentPane().add(btnScience);
 		
@@ -98,7 +98,7 @@ public class TopicSelect extends JFrame {
 				dispose();
 			}
 		});
-		btnHistory.setFont(new Font("Arial", Font.BOLD, 12));
+		btnHistory.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		btnHistory.setBounds(273, 191, 90, 28);
 		getContentPane().add(btnHistory);
 		
