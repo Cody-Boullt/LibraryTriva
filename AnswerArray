@@ -1,0 +1,318 @@
+/*
+ * Team Compilation
+ * Cody Boullt, Richard Creech, Alexandre Hoppe
+ * 03/26/2019
+ */
+
+import java.util.Random;
+
+public class AnswerArray {
+	
+	private static String[][] answers = new String[30][4];
+	
+	// fill 2D array with answers
+	public static void fillArray() {
+		
+		// Kindergarten math
+		answers[0][0] = "7";
+		answers[1][0] = "9";
+		answers[2][0] = "8";
+		answers[3][0] = "9";
+		answers[4][0] = "9";
+		
+		// Kindergarten science
+		answers[0][1] = "Bark";
+		answers[1][1] = "Butterflies";
+		answers[2][1] = "Green";
+		answers[3][1] = "Chicken";
+		answers[4][1] = "Beak";
+		
+		// Kindergarten history
+		answers[0][2] = "Virginia";
+		answers[1][2] = "Red, White, and Blue";
+		answers[2][2] = "Bird";
+		answers[3][2] = "7";
+		answers[4][2] = "6";
+		
+		// Kindergarten English
+		answers[0][3] = "Blue";
+		answers[1][3] = "Cat";
+		answers[2][3] = "i";
+		answers[3][3] = "3";
+		answers[4][3] = "Dinosaur";
+		
+		// 1st grade math
+		answers[5][0] = "odd";
+		answers[6][0] = "8";
+		answers[7][0] = "24 and 27";
+		answers[8][0] = "3";
+		answers[9][0] = "3";
+		
+		// 1st grade science
+		answers[5][1] = "Corn";
+		answers[6][1] = "Cold";
+		answers[7][1] = "20";
+		answers[8][1] = "8";
+		answers[9][1] = "Fish";
+		
+		// 1st grade history
+		answers[5][2] = "50";
+		answers[6][2] = "50";
+		answers[7][2] = "Allegiance";
+		answers[8][2] = "Runs the city.";
+		answers[9][2] = "George Washington";
+		
+		// 1st grade English
+		answers[5][3] = "A, I, E, O, and U";
+		answers[6][3] = "6";
+		answers[7][3] = "Apple";
+		answers[8][3] = "House";
+		answers[9][3] = "Who, What, When, Where, and Why";
+		
+		// 2nd grade math
+		answers[10][0] = "44";
+		answers[11][0] = "278";
+		answers[12][0] = "15";
+		answers[13][0] = "57 cents";
+		answers[14][0] = "52";
+		
+		// 2nd grade science
+		answers[10][1] = "Water";
+		answers[11][1] = "8";
+		answers[12][1] = "3";
+		answers[13][1] = "Precipitation";
+		answers[14][1] = "Mammal";
+		
+		// 2nd grade history
+		answers[10][2] = "Martin Luther King Jr.";
+		answers[11][2] = "North, South, East, and West";
+		answers[12][2] = "Executive, Judicial, and Legislative";
+		answers[13][2] = "Egypt";
+		answers[14][2] = "New York";
+		
+		// 2nd grade English
+		answers[10][3] = "?";
+		answers[11][3] = "Giraffe";
+		answers[12][3] = "\"Like\" or \"As\"";
+		answers[13][3] = "after";
+		answers[14][3] = "patiently";
+		
+		// 3rd grade math
+		answers[15][0] = "6";
+		answers[16][0] = "0";
+		answers[17][0] = "40";
+		answers[18][0] = "20";
+		answers[19][0] = "487";
+		
+		// 3rd grade science
+		answers[15][1] = "Earth";
+		answers[16][1] = "Copper";
+		answers[17][1] = "Saturn";
+		answers[18][1] = "Octopus";
+		answers[19][1] = "Turtle";
+		
+		// 3rd grade history
+		answers[15][2] = "Abraham Lincoln";
+		answers[16][2] = "Abraham Lincoln";
+		answers[17][2] = "Richmond";
+		answers[18][2] = "John Adams";
+		answers[19][2] = "Alaska";
+		
+		// 3rd grade English
+		answers[15][3] = "Cacti";
+		answers[16][3] = "she";
+		answers[17][3] = "their";
+		answers[18][3] = "too";
+		answers[19][3] = "They're";
+		
+		// 4th grade math
+		answers[20][0] = "4/7";
+		answers[21][0] = "3";
+		answers[22][0] = "100";
+		answers[23][0] = "11";
+		answers[24][0] = "1/2";
+		
+		// 4th grade science
+		answers[20][1] = "1";
+		answers[21][1] = "Caterpillar";
+		answers[22][1] = "Gravity";
+		answers[23][1] = "Molten rock in Earth's crust";
+		answers[24][1] = "Uranus";
+		
+		// 4th grade history
+		answers[20][2] = "7";
+		answers[21][2] = "Harriet Tuban";
+		answers[22][2] = "United States and Soviet Union";
+		answers[23][2] = "7";
+		answers[24][2] = "1969";
+		
+		// 4th grade English
+		answers[20][3] = "-ly";
+		answers[21][3] = "Beauty";
+		answers[22][3] = "Mom started cutting up carrots, celery, and peppers.";
+		answers[23][3] = "An";
+		answers[24][3] = "An";
+		
+		// 5th grade math
+		answers[25][0] = "253";
+		answers[26][0] = "170";
+		answers[27][0] = "12,667";
+		answers[28][0] = "2 1/5";
+		answers[29][0] = "4 cups";
+		
+		// 5th grade science
+		answers[25][1] = "Evaporation";
+		answers[26][1] = "Age";
+		answers[27][1] = "2";
+		answers[28][1] = "Topsoil, Subsoil, Parent Material, and Bedrock";
+		answers[29][1] = "Diamond";
+		
+		// 5th grade history
+		answers[25][2] = "Delaware";
+		answers[26][2] = "4 years";
+		answers[27][2] = "The Great War";
+		answers[28][2] = "British fired guns into a hostile crowd of colonists";
+		answers[29][2] = "Rosa Park";
+		
+		// 5th grade English
+		answers[25][3] = "I";
+		answers[26][3] = "meow";
+		answers[27][3] = "Before class";
+		answers[28][3] = "Last winter, school got canceled twice.";
+		answers[29][3] = "and & but";
+	}
+	
+	// return question based on grade and topic
+	public static String getAnsArray(String grade, String topic) {
+		Random rand = new Random();
+		int row = 0;
+		int col = 0;
+		
+		if ( grade == "K" && topic == "math")
+		{
+			row = rand.nextInt(5);
+			col = 0;
+		}
+		else if ( grade == "K" && topic == "science")
+		{
+			row = rand.nextInt(5);
+			col = 1;
+		}
+		else if ( grade == "K" && topic == "history")
+		{
+			row = rand.nextInt(5);
+			col = 2;
+		}
+		else if ( grade == "K" && topic == "english")
+		{
+			row = rand.nextInt(5);
+			col = 3;
+		}
+		else if ( grade == "1" && topic == "math")
+		{
+			row = rand.nextInt(5) + 5;
+			col = 0;
+		}
+		else if ( grade == "1" && topic == "science")
+		{
+			row = rand.nextInt(5) + 5;
+			col = 1;
+		}
+		else if ( grade == "1" && topic == "history")
+		{
+			row = rand.nextInt(5) + 5;
+			col = 2;
+		}
+		else if ( grade == "1" && topic == "english")
+		{
+			row = rand.nextInt(5) + 5;
+			col = 3;
+		}
+		else if ( grade == "2" && topic == "math")
+		{
+			row = rand.nextInt(5) + 10;
+			col = 0;
+		}
+		else if ( grade == "2" && topic == "science")
+		{
+			row = rand.nextInt(5) + 10;
+			col = 1;
+		}
+		else if ( grade == "2" && topic == "history")
+		{
+			row = rand.nextInt(5) + 10;
+			col = 2;
+		}
+		else if ( grade == "2" && topic == "english")
+		{
+			row = rand.nextInt(5) + 10;
+			col = 3;
+		}
+		else if ( grade == "3" && topic == "math")
+		{
+			row = rand.nextInt(5) + 15;
+			col = 0;
+		}
+		else if ( grade == "3" && topic == "science")
+		{
+			row = rand.nextInt(5) + 15;
+			col = 1;
+		}
+		else if ( grade == "3" && topic == "history")
+		{
+			row = rand.nextInt(5) + 15;
+			col = 2;
+		}
+		else if ( grade == "3" && topic == "english")
+		{
+			row = rand.nextInt(5) + 15;
+			col = 3;
+		}
+		else if ( grade == "4" && topic == "math")
+		{
+			row = rand.nextInt(5) + 20;
+			col = 0;
+		}
+		else if ( grade == "4" && topic == "science")
+		{
+			row = rand.nextInt(5) + 20;
+			col = 1;
+		}
+		else if ( grade == "4" && topic == "history")
+		{
+			row = rand.nextInt(5) + 20;
+			col = 2;
+		}
+		else if ( grade == "4" && topic == "english")
+		{
+			row = rand.nextInt(5) + 20;
+			col = 3;
+		}
+		else if ( grade == "5" && topic == "math")
+		{
+			row = rand.nextInt(5) + 25;
+			col = 0;
+		}
+		else if ( grade == "5" && topic == "science")
+		{
+			row = rand.nextInt(5) + 25;
+			col = 1;
+		}
+		else if ( grade == "5" && topic == "history")
+		{
+			row = rand.nextInt(5) + 25;
+			col = 2;
+		}
+		else if ( grade == "5" && topic == "english")
+		{
+			row = rand.nextInt(5) + 25;
+			col = 3;
+		}
+		
+		String ansPass = answers[row][col];
+		
+		return ansPass;
+		
+	}
+
+}
