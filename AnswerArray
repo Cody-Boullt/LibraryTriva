@@ -4,13 +4,14 @@
  * 03/26/2019
  */
 
-import java.util.Random;
-
 public class AnswerArray {
 	
 	private static String[][] answers = new String[30][4];
+	private static String[][][] wrongAnswers = new String[30][4][3];
+	private static String corrAns;
+	private static String wrgAnsOne, wrgAnsTwo, wrgAnsThree;
 	
-	// fill 2D array with answers
+	// fill 2D array with correct answers
 	public static void fillArray() {
 		
 		// Kindergarten math
@@ -182,136 +183,411 @@ public class AnswerArray {
 		answers[29][3] = "and & but";
 	}
 	
-	// return question based on grade and topic
-	public static String getAnsArray(String grade, String topic) {
-		Random rand = new Random();
-		int row = 0;
-		int col = 0;
+	// fill 3D array with wrong answers
+	public static void fillFalseArray() {
 		
-		if ( grade == "K" && topic == "math")
-		{
-			row = rand.nextInt(5);
-			col = 0;
-		}
-		else if ( grade == "K" && topic == "science")
-		{
-			row = rand.nextInt(5);
-			col = 1;
-		}
-		else if ( grade == "K" && topic == "history")
-		{
-			row = rand.nextInt(5);
-			col = 2;
-		}
-		else if ( grade == "K" && topic == "english")
-		{
-			row = rand.nextInt(5);
-			col = 3;
-		}
-		else if ( grade == "1" && topic == "math")
-		{
-			row = rand.nextInt(5) + 5;
-			col = 0;
-		}
-		else if ( grade == "1" && topic == "science")
-		{
-			row = rand.nextInt(5) + 5;
-			col = 1;
-		}
-		else if ( grade == "1" && topic == "history")
-		{
-			row = rand.nextInt(5) + 5;
-			col = 2;
-		}
-		else if ( grade == "1" && topic == "english")
-		{
-			row = rand.nextInt(5) + 5;
-			col = 3;
-		}
-		else if ( grade == "2" && topic == "math")
-		{
-			row = rand.nextInt(5) + 10;
-			col = 0;
-		}
-		else if ( grade == "2" && topic == "science")
-		{
-			row = rand.nextInt(5) + 10;
-			col = 1;
-		}
-		else if ( grade == "2" && topic == "history")
-		{
-			row = rand.nextInt(5) + 10;
-			col = 2;
-		}
-		else if ( grade == "2" && topic == "english")
-		{
-			row = rand.nextInt(5) + 10;
-			col = 3;
-		}
-		else if ( grade == "3" && topic == "math")
-		{
-			row = rand.nextInt(5) + 15;
-			col = 0;
-		}
-		else if ( grade == "3" && topic == "science")
-		{
-			row = rand.nextInt(5) + 15;
-			col = 1;
-		}
-		else if ( grade == "3" && topic == "history")
-		{
-			row = rand.nextInt(5) + 15;
-			col = 2;
-		}
-		else if ( grade == "3" && topic == "english")
-		{
-			row = rand.nextInt(5) + 15;
-			col = 3;
-		}
-		else if ( grade == "4" && topic == "math")
-		{
-			row = rand.nextInt(5) + 20;
-			col = 0;
-		}
-		else if ( grade == "4" && topic == "science")
-		{
-			row = rand.nextInt(5) + 20;
-			col = 1;
-		}
-		else if ( grade == "4" && topic == "history")
-		{
-			row = rand.nextInt(5) + 20;
-			col = 2;
-		}
-		else if ( grade == "4" && topic == "english")
-		{
-			row = rand.nextInt(5) + 20;
-			col = 3;
-		}
-		else if ( grade == "5" && topic == "math")
-		{
-			row = rand.nextInt(5) + 25;
-			col = 0;
-		}
-		else if ( grade == "5" && topic == "science")
-		{
-			row = rand.nextInt(5) + 25;
-			col = 1;
-		}
-		else if ( grade == "5" && topic == "history")
-		{
-			row = rand.nextInt(5) + 25;
-			col = 2;
-		}
-		else if ( grade == "5" && topic == "english")
-		{
-			row = rand.nextInt(5) + 25;
-			col = 3;
-		}
+		// Kindergarten math
+		wrongAnswers[0][0][0] = "5";
+		wrongAnswers[0][0][1] = "6";
+		wrongAnswers[0][0][2] = "8";
 		
-		String ansPass = answers[row][col];
+		wrongAnswers[1][0][0] = "8";
+		wrongAnswers[1][0][1] = "7";
+		wrongAnswers[1][0][2] = "10";
 		
-		return ansPass;
+		wrongAnswers[2][0][0] = "7";
+		wrongAnswers[2][0][1] = "6";
+		wrongAnswers[2][0][2] = "9";
+		
+		wrongAnswers[3][0][0] = "8";
+		wrongAnswers[3][0][1] = "7";
+		wrongAnswers[3][0][2] = "10";
+		
+		wrongAnswers[4][0][0] = "8";
+		wrongAnswers[4][0][1] = "7";
+		wrongAnswers[4][0][2] = "10";
+		
+		// Kindergarten science
+		wrongAnswers[0][1][0] = "Meow";
+		wrongAnswers[0][1][1] = "Chirp";
+		wrongAnswers[0][1][2] = "Moo";
+		
+		wrongAnswers[1][1][0] = "Flies";
+		wrongAnswers[1][1][1] = "Birds";
+		wrongAnswers[1][1][2] = "Bees";
+		
+		wrongAnswers[2][1][0] = "Blue";
+		wrongAnswers[2][1][1] = "Red";
+		wrongAnswers[2][1][2] = "Yellow";
+		
+		wrongAnswers[3][1][0] = "Cow";
+		wrongAnswers[3][1][1] = "Horse";
+		wrongAnswers[3][1][2] = "Dog";
+		
+		wrongAnswers[4][1][0] = "Teeth";
+		wrongAnswers[4][1][1] = "Fins";
+		wrongAnswers[4][1][2] = "Fur";
+		
+		// Kindergarten history
+		wrongAnswers[0][2][0] = "Ohio";
+		wrongAnswers[0][2][1] = "Texas";
+		wrongAnswers[0][2][2] = "Florida";
+		
+		wrongAnswers[1][2][0] = "Red, White, and Green";
+		wrongAnswers[1][2][1] = "Red, Yellow, and Blue";
+		wrongAnswers[1][2][2] = "Purple, White, and Blue";
+		
+		wrongAnswers[2][2][0] = "Mammal";
+		wrongAnswers[2][2][1] = "Insect";
+		wrongAnswers[2][2][2] = "Fish";
+		
+		wrongAnswers[3][2][0] = "8";
+		wrongAnswers[3][2][1] = "9";
+		wrongAnswers[3][2][2] = "5";
+		
+		wrongAnswers[4][2][0] = "5";
+		wrongAnswers[4][2][1] = "4";
+		wrongAnswers[4][2][2] = "7";
+		
+		// Kindergarten English
+		wrongAnswers[0][3][0] = "Blu";
+		wrongAnswers[0][3][1] = "Redd";
+		wrongAnswers[0][3][2] = "Gren";
+		
+		wrongAnswers[1][3][0] = "Dag";
+		wrongAnswers[1][3][1] = "Caat";
+		wrongAnswers[1][3][2] = "Coww";
+		
+		wrongAnswers[2][3][0] = "u";
+		wrongAnswers[2][3][1] = "o";
+		wrongAnswers[2][3][2] = "e";
+		
+		wrongAnswers[3][3][0] = "2";
+		wrongAnswers[3][3][1] = "4";
+		wrongAnswers[3][3][2] = "6";
+		
+		wrongAnswers[4][3][0] = "Bird";
+		wrongAnswers[4][3][1] = "Lizard";
+		wrongAnswers[4][3][2] = "Mammal";
+		
+		
+		// 1st grade math
+		wrongAnswers[5][0][0] = "even";
+		wrongAnswers[5][0][1] = "both";
+		wrongAnswers[5][0][2] = "neither";
+		
+		wrongAnswers[6][0][0] = "2";
+		wrongAnswers[6][0][1] = "They are equal";
+		wrongAnswers[6][0][2] = "I don't know";
+		
+		wrongAnswers[7][0][0] = "24";
+		wrongAnswers[7][0][1] = "27";
+		wrongAnswers[7][0][2] = "20 and 28";
+		
+		wrongAnswers[8][0][0] = "2";
+		wrongAnswers[8][0][1] = "4";
+		wrongAnswers[8][0][2] = "5";
+		
+		wrongAnswers[9][0][0] = "6";
+		wrongAnswers[9][0][1] = "9";
+		wrongAnswers[9][0][2] = "0";
+		
+		
+		// 1st grade science
+		wrongAnswers[5][1][0] = "Apple";
+		wrongAnswers[5][1][1] = "Banana";
+		wrongAnswers[5][1][2] = "Strawberry";
+		
+		wrongAnswers[6][1][0] = "Hot";
+		wrongAnswers[6][1][1] = "Both";
+		wrongAnswers[6][1][2] = "Neither";
+		
+		wrongAnswers[7][1][0] = "10";
+		wrongAnswers[7][1][1] = "5";
+		wrongAnswers[7][1][2] = "15";
+		
+		wrongAnswers[8][1][0] = "6";
+		wrongAnswers[8][1][1] = "4";
+		wrongAnswers[8][1][2] = "2";
+		
+		wrongAnswers[9][1][0] = "Birds";
+		wrongAnswers[9][1][1] = "Insects";
+		wrongAnswers[9][1][2] = "Dinosaurs";
+		
+		
+		// 1st grade history
+		wrongAnswers[5][2][0] = "10";
+		wrongAnswers[5][2][1] = "25";
+		wrongAnswers[5][2][2] = "13";
+		
+		wrongAnswers[6][2][0] = "10";
+		wrongAnswers[6][2][1] = "25";
+		wrongAnswers[6][2][2] = "13";
+		
+		wrongAnswers[7][2][0] = "America";
+		wrongAnswers[7][2][1] = "Loyalty";
+		wrongAnswers[7][2][2] = "Dreams";
+		
+		wrongAnswers[8][2][0] = "Runs the state.";
+		wrongAnswers[8][2][1] = "Runs the country.";
+		wrongAnswers[8][2][2] = "Runs the world.";
+		
+		wrongAnswers[9][2][0] = "Abraham Lincoln";
+		wrongAnswers[9][2][1] = "Thomas Jefferson";
+		wrongAnswers[9][2][2] = "Benjamin Franklin";
+		
+		
+		// 1st grade English
+		wrongAnswers[5][3][0] = "X, Y, and Z";
+		wrongAnswers[5][3][1] = "L, M, N, O, P";
+		wrongAnswers[5][3][2] = "A, B, C, and D";
+		
+		wrongAnswers[6][3][0] = "5";
+		wrongAnswers[6][3][1] = "7";
+		wrongAnswers[6][3][2] = "8";
+		
+		wrongAnswers[7][3][0] = "Aple";
+		wrongAnswers[7][3][1] = "Aplle";
+		wrongAnswers[7][3][2] = "Appl";
+		
+		wrongAnswers[8][3][0] = "Hous";
+		wrongAnswers[8][3][1] = "Howse";
+		wrongAnswers[8][3][2] = "Houce";
+		
+		wrongAnswers[9][3][0] = "While, Which, and How";
+		wrongAnswers[9][3][1] = "Why, Why, Why, Why, and Why";
+		wrongAnswers[9][3][2] = "White, Winter, Wild, Warm, and Wizard";
+		
+		
+		// 2nd grade math
+		wrongAnswers[10][0][0] = "40";
+		wrongAnswers[10][0][1] = "12";
+		wrongAnswers[10][0][2] = "88";
+		
+		wrongAnswers[11][0][0] = "178";
+		wrongAnswers[11][0][1] = "250";
+		wrongAnswers[11][0][2] = "312";
+		
+		wrongAnswers[12][0][0] = "5";
+		wrongAnswers[12][0][1] = "10";
+		wrongAnswers[12][0][2] = "25";
+		
+		wrongAnswers[13][0][0] = "27 cents";
+		wrongAnswers[13][0][1] = "74 cents";
+		wrongAnswers[13][0][2] = "17 cents";
+		
+		wrongAnswers[14][0][0] = "22";
+		wrongAnswers[14][0][1] = "104";
+		wrongAnswers[14][0][2] = "75";
+		
+		
+		// 2nd grade science
+		wrongAnswers[10][1][0] = "Milk";
+		wrongAnswers[10][1][1] = "Juice";
+		wrongAnswers[10][1][2] = "Soda";
+		
+		wrongAnswers[11][1][0] = "9";
+		wrongAnswers[11][1][1] = "7";
+		wrongAnswers[11][1][2] = "10";
+		
+		wrongAnswers[12][1][0] = "2";
+		wrongAnswers[12][1][1] = "4";
+		wrongAnswers[12][1][2] = "1";
+		
+		wrongAnswers[13][1][0] = "Evaporation";
+		wrongAnswers[13][1][1] = "Condensation";
+		wrongAnswers[13][1][2] = "Acclimation";
+		
+		wrongAnswers[14][1][0] = "Bird";
+		wrongAnswers[14][1][1] = "Lizard";
+		wrongAnswers[14][1][2] = "Insect";
+		
+		
+		// 2nd grade history
+		wrongAnswers[10][2][0] = "Abraham Lincoln";
+		wrongAnswers[10][2][1] = "George Washington";
+		wrongAnswers[10][2][2] = "Neil Armstrong";
+		
+		wrongAnswers[11][2][0] = "Up, Down, Right, Left";
+		wrongAnswers[11][2][1] = "Yes, No, Maybe";
+		wrongAnswers[11][2][2] = "NW, NE, SW, SE";
+		
+		wrongAnswers[12][2][0] = "Presedential, Judges, and Juries";
+		wrongAnswers[12][2][1] = "Government, Civilian, Citizen";
+		wrongAnswers[12][2][2] = "Federal, State, City";
+		
+		wrongAnswers[13][2][0] = "France";
+		wrongAnswers[13][2][1] = "England";
+		wrongAnswers[13][2][2] = "Russia";
+		
+		wrongAnswers[14][2][0] = "New Jersey";
+		wrongAnswers[14][2][1] = "Boston";
+		wrongAnswers[14][2][2] = "Detroit";
+		
+		
+		// 2nd grade English
+		wrongAnswers[10][3][0] = ".";
+		wrongAnswers[10][3][1] = "!";
+		wrongAnswers[10][3][2] = ",";
+		
+		wrongAnswers[11][3][0] = "Girafe";
+		wrongAnswers[11][3][1] = "Geraffe";
+		wrongAnswers[11][3][2] = "Giraph";
+		
+		wrongAnswers[12][3][0] = "and & but";
+		wrongAnswers[12][3][1] = "equals";
+		wrongAnswers[12][3][2] = "is a";
+		
+		wrongAnswers[13][3][0] = "when";
+		wrongAnswers[13][3][1] = "because";
+		wrongAnswers[13][3][2] = "her";
+		
+		wrongAnswers[14][3][0] = "The";
+		wrongAnswers[14][3][1] = "girl";
+		wrongAnswers[14][3][2] = "waited";
+		
+		
+		// 3rd grade math
+		wrongAnswers[15][0][0] = "6";
+		wrongAnswers[15][0][1] = "6";
+		wrongAnswers[15][0][2] = "6";
+		
+		wrongAnswers[16][0][0] = "0";
+		wrongAnswers[16][0][1] = "0";
+		wrongAnswers[16][0][2] = "0";
+		
+		wrongAnswers[17][0][0] = "40";
+		wrongAnswers[17][0][1] = "40";
+		wrongAnswers[17][0][2] = "40";
+		
+		wrongAnswers[18][0][0] = "20";
+		wrongAnswers[18][0][1] = "20";
+		wrongAnswers[18][0][2] = "20";
+		
+		wrongAnswers[19][0][0] = "487";
+		wrongAnswers[19][0][1] = "487";
+		wrongAnswers[19][0][2] = "487";
+		
+		
+		// 3rd grade science
+		answers[15][1] = "Earth";
+		answers[16][1] = "Copper";
+		answers[17][1] = "Saturn";
+		answers[18][1] = "Octopus";
+		answers[19][1] = "Turtle";
+		
+		// 3rd grade history
+		answers[15][2] = "Abraham Lincoln";
+		answers[16][2] = "Abraham Lincoln";
+		answers[17][2] = "Richmond";
+		answers[18][2] = "John Adams";
+		answers[19][2] = "Alaska";
+		
+		// 3rd grade English
+		answers[15][3] = "Cacti";
+		answers[16][3] = "she";
+		answers[17][3] = "their";
+		answers[18][3] = "too";
+		answers[19][3] = "They're";
+		
+		// 4th grade math
+		answers[20][0] = "4/7";
+		answers[21][0] = "3";
+		answers[22][0] = "100";
+		answers[23][0] = "11";
+		answers[24][0] = "1/2";
+		
+		// 4th grade science
+		answers[20][1] = "1";
+		answers[21][1] = "Caterpillar";
+		answers[22][1] = "Gravity";
+		answers[23][1] = "Molten rock in Earth's crust";
+		answers[24][1] = "Uranus";
+		
+		// 4th grade history
+		answers[20][2] = "7";
+		answers[21][2] = "Harriet Tuban";
+		answers[22][2] = "United States and Soviet Union";
+		answers[23][2] = "7";
+		answers[24][2] = "1969";
+		
+		// 4th grade English
+		answers[20][3] = "-ly";
+		answers[21][3] = "Beauty";
+		answers[22][3] = "Mom started cutting up carrots, celery, and peppers.";
+		answers[23][3] = "An";
+		answers[24][3] = "An";
+		
+		// 5th grade math
+		answers[25][0] = "253";
+		answers[26][0] = "170";
+		answers[27][0] = "12,667";
+		answers[28][0] = "2 1/5";
+		answers[29][0] = "4 cups";
+		
+		// 5th grade science
+		answers[25][1] = "Evaporation";
+		answers[26][1] = "Age";
+		answers[27][1] = "2";
+		answers[28][1] = "Topsoil, Subsoil, Parent Material, and Bedrock";
+		answers[29][1] = "Diamond";
+		
+		// 5th grade history
+		answers[25][2] = "Delaware";
+		answers[26][2] = "4 years";
+		answers[27][2] = "The Great War";
+		answers[28][2] = "British fired guns into a hostile crowd of colonists";
+		answers[29][2] = "Rosa Park";
+		
+		// 5th grade English
+		answers[25][3] = "I";
+		answers[26][3] = "meow";
+		answers[27][3] = "Before class";
+		answers[28][3] = "Last winter, school got canceled twice.";
+		answers[29][3] = "and & but";
+	}
+	
+	// set correct answer with same index as question
+	public static void setAnsArray(int row, int col) {
+			
+			corrAns = answers[row][col];
+			
+		}
+	
+	// return correct answer
+	public static String getAnsArray() {
+		
+		return corrAns;
+		
+	}
+	
+	// set wrong answer with same index as question
+	public static void setWrgArray(int row, int col) {
+			
+			wrgAnsOne = wrongAnswers[row][col][0];
+			wrgAnsTwo = wrongAnswers[row][col][1];
+			wrgAnsThree = wrongAnswers[row][col][2];
+			
+		}
+	
+	// return wrong answer 1
+	public static String getWrgAnsOne() {
+		
+		return wrgAnsOne;
+		
+	}
+	
+	// return wrong answer 2
+	public static String getWrgAnsTwo() {
+		
+		return wrgAnsTwo;
+		
+	}
+	
+	// return wrong answer 3
+	public static String getWrgAnsThree() {
+		
+		return wrgAnsThree;
 		
 	}
 
