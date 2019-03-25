@@ -1,7 +1,7 @@
 /*
  * Team Compilation
  * Cody Boullt, Richard Creech, Alexandre Hoppe
- * 03/04/2019
+ * 03/26/2019
  */
 
 import java.awt.EventQueue;
@@ -14,13 +14,12 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class Answer extends JFrame {
 
 	private JFrame frmAnswer;
-	//private final JLabel lblCorrectincorrect = new JLabel("Correct/Incorrect");
+	private final JLabel lblCorrectincorrect = new JLabel("Correct/Incorrect");
 
 	/**
 	 * Launch the application.
@@ -42,28 +41,20 @@ public class Answer extends JFrame {
 	 * Create the application.
 	 */
 	public Answer() {
-		setTitle("Results");
-		getContentPane().setLayout(null);
-		
-		JLabel lblResults = new JLabel("Correct!");
-		lblResults.setHorizontalAlignment(SwingConstants.CENTER);
-		lblResults.setFont(new Font("Arial", Font.BOLD, 20));
-		lblResults.setBounds(90, 43, 221, 27);
-		getContentPane().add(lblResults);
-		
-		JLabel label = new JLabel("Score:");
-		label.setFont(new Font("Arial", Font.BOLD, 18));
-		label.setBounds(143, 112, 143, 48);
-		getContentPane().add(label);
-		
-		JLabel lblStrikes = new JLabel("Strikes:");
-		lblStrikes.setFont(new Font("Arial", Font.BOLD, 18));
-		lblStrikes.setBounds(143, 145, 143, 48);
-		getContentPane().add(lblStrikes);
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmAnswer = new JFrame();
+		frmAnswer.setTitle("Results");
+		frmAnswer.setBounds(200, 200, 450, 300);
+		frmAnswer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 434, 23);
-		getContentPane().add(menuBar);
+		frmAnswer.setJMenuBar(menuBar);
 		
 		JMenu menu = new JMenu("File");
 		menuBar.add(menu);
@@ -72,7 +63,7 @@ public class Answer extends JFrame {
 		menuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Launcher.main(null);
-				dispose();
+				frmAnswer.dispose();
 			}
 		});
 		menu.add(menuItem);
@@ -80,7 +71,7 @@ public class Answer extends JFrame {
 		JMenuItem menuItem_1 = new JMenuItem("Quit");
 		menuItem_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
+				frmAnswer.dispose();
 			}
 		});
 		menu.add(menuItem_1);
@@ -98,25 +89,20 @@ public class Answer extends JFrame {
 			}
 		});
 		menu_1.add(menuItem_2);
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frmAnswer = new JFrame();
-		frmAnswer.setBounds(100, 100, 450, 300);
-		frmAnswer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
-		//menu_1.add(menuItem_2);
 		frmAnswer.getContentPane().setLayout(null);
-		//lblCorrectincorrect.setBounds(143, 58, 148, 31);
-		//frmAnswer.getContentPane().add(lblCorrectincorrect);
-		//lblCorrectincorrect.setFont(new Font("Arial", Font.BOLD, 18));
+		lblCorrectincorrect.setBounds(143, 58, 148, 31);
+		frmAnswer.getContentPane().add(lblCorrectincorrect);
+		lblCorrectincorrect.setFont(new Font("Arial", Font.BOLD, 18));
 		
+		JLabel label = new JLabel("Score:");
+		label.setFont(new Font("Arial", Font.BOLD, 18));
+		label.setBounds(143, 112, 143, 48);
+		frmAnswer.getContentPane().add(label);
 		
+		JLabel lblStrikes = new JLabel("Strikes:");
+		lblStrikes.setFont(new Font("Arial", Font.BOLD, 18));
+		lblStrikes.setBounds(143, 145, 143, 48);
+		frmAnswer.getContentPane().add(lblStrikes);
 	}
 
 }
