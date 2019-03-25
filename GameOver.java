@@ -14,6 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JButton;
 
 @SuppressWarnings("serial")
 public class GameOver extends JFrame {
@@ -53,8 +54,8 @@ public class GameOver extends JFrame {
 		frmGameOver.setBounds(100, 100, 450, 300);
 		frmGameOver.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGameOver.getContentPane().setLayout(null);
-		lblGameOver.setFont(new Font("Arial", Font.BOLD, 18));
-		lblGameOver.setBounds(145, 46, 143, 48);
+		lblGameOver.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblGameOver.setBounds(131, 50, 143, 32);
 		frmGameOver.getContentPane().add(lblGameOver);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -89,21 +90,50 @@ public class GameOver extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				HowToPlay howTo = new HowToPlay();
 				howTo.setLocation( 250, 150 );
-				howTo.setSize( 450, 300 );
+				howTo.setSize( 364, 161 );
 				howTo.setVisible(true);
 			}
 		});
 		menu_1.add(menuItem_2);
 		
 		JLabel lblScore = new JLabel("Score:");
-		lblScore.setFont(new Font("Arial", Font.BOLD, 18));
-		lblScore.setBounds(145, 117, 143, 48);
+		lblScore.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblScore.setBounds(131, 128, 66, 31);
 		frmGameOver.getContentPane().add(lblScore);
 		
 		JLabel lblHighScore = new JLabel("High Score:");
-		lblHighScore.setFont(new Font("Arial", Font.BOLD, 18));
-		lblHighScore.setBounds(145, 148, 143, 48);
+		lblHighScore.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblHighScore.setBounds(131, 162, 114, 31);
 		frmGameOver.getContentPane().add(lblHighScore);
+		
+		JButton buttonQuit = new JButton("Quit");
+		buttonQuit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		buttonQuit.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		buttonQuit.setBounds(232, 212, 134, 28);
+		frmGameOver.getContentPane().add(buttonQuit);
+		
+		JButton buttonPlayAgain = new JButton("Play Again");
+		buttonPlayAgain.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		buttonPlayAgain.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
+		buttonPlayAgain.setBounds(67, 212, 135, 28);
+		frmGameOver.getContentPane().add(buttonPlayAgain);
+		
+		JLabel lblScoreCounter = new JLabel("X");
+		lblScoreCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblScoreCounter.setBounds(197, 128, 66, 31);
+		frmGameOver.getContentPane().add(lblScoreCounter);
+		
+		JLabel lblHighScoreCounter = new JLabel("X");
+		lblHighScoreCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		lblHighScoreCounter.setBounds(243, 162, 66, 31);
+		frmGameOver.getContentPane().add(lblHighScoreCounter);
 	}
 
 }
