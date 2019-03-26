@@ -53,6 +53,7 @@ public class Answer extends JFrame {
 	 */
 	private void initialize(String grade, String topic, String questPass, String choice) {
 		frmAnswer = new JFrame();
+		frmAnswer.setResizable(false);
 		frmAnswer.setTitle("Results");
 		frmAnswer.setBounds(200, 200, 450, 300);
 		frmAnswer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
