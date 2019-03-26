@@ -15,6 +15,9 @@ import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class Difficulty extends JFrame {
@@ -41,11 +44,13 @@ public class Difficulty extends JFrame {
 	 * Create the application.
 	 */
 	public Difficulty() {
+		setResizable(false);
 		setTitle("Difficulty Selection");
 		getContentPane().setLayout(null);
 		
 		JLabel lblDifficulty = new JLabel("What grade are you in?");
-		lblDifficulty.setFont(new Font("Eras Bold ITC", Font.PLAIN, 14));
+		lblDifficulty.setForeground(Color.WHITE);
+		lblDifficulty.setFont(new Font("Eras Bold ITC", Font.PLAIN, 16));
 		lblDifficulty.setBounds(24, 54, 221, 24);
 		getContentPane().add(lblDifficulty);
 		
@@ -95,7 +100,7 @@ public class Difficulty extends JFrame {
 		getContentPane().add(btnTwo);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 434, 23);
+		menuBar.setBounds(0, 0, 444, 23);
 		getContentPane().add(menuBar);
 		
 		JMenu mnFile = new JMenu("File");
@@ -176,6 +181,10 @@ public class Difficulty extends JFrame {
 		btnFive.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		btnFive.setBounds(247, 192, 119, 39);
 		getContentPane().add(btnFive);
+		
+		JLabel background = new JLabel("", new ImageIcon("C:\\Users\\Cody\\eclipse-workspace\\LibraryTriviaCenter\\img\\MainMenu.png"), SwingConstants.CENTER);
+		background.setBounds(0, 0, 444, 272);
+		getContentPane().add(background);
 		initialize();
 	}
 
