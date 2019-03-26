@@ -12,11 +12,13 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.SwingConstants;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class Question extends JFrame {
@@ -73,7 +75,11 @@ public class Question extends JFrame {
 		frmQuestion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmQuestion.getContentPane().setLayout(null);
 		
+		JLabel background = new JLabel();
 		JLabel lblQuestionHere = new JLabel(questPassed, SwingConstants.CENTER);
+		lblQuestionHere.setForeground(Color.BLACK);
+		lblQuestionHere.setOpaque(true);
+		lblQuestionHere.setBackground(Color.WHITE);
 		lblQuestionHere.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		lblQuestionHere.setBounds(10, 42, 412, 27);
 		frmQuestion.getContentPane().add(lblQuestionHere);
@@ -82,7 +88,7 @@ public class Question extends JFrame {
 		btnAnswer_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String choice = answerOne;
-				Answer.main(grade, topic, questPassed, choice);
+				Answer.main(grade, topic, ansPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -95,7 +101,7 @@ public class Question extends JFrame {
 		btnAnswer_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String choice = answerTwo;
-				Answer.main(grade, topic, questPassed, choice);
+				Answer.main(grade, topic, ansPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -107,7 +113,7 @@ public class Question extends JFrame {
 		btnAnswer_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String choice = answerThree;
-				Answer.main(grade, topic, questPassed, choice);
+				Answer.main(grade, topic, ansPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -119,7 +125,7 @@ public class Question extends JFrame {
 		btnAnswer_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String choice = answerFour;
-				Answer.main(grade, topic, questPassed, choice);
+				Answer.main(grade, topic, ansPassed, choice);
 				frmQuestion.dispose();
 			}
 		});
@@ -128,7 +134,7 @@ public class Question extends JFrame {
 		frmQuestion.getContentPane().add(btnAnswer_4);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 434, 23);
+		menuBar.setBounds(0, 0, 444, 23);
 		frmQuestion.getContentPane().add(menuBar);
 		
 		JMenu menu = new JMenu("File");
@@ -164,6 +170,11 @@ public class Question extends JFrame {
 			}
 		});
 		menu_1.add(menuItem_2);
+		
+		background = new JLabel("", new ImageIcon("C:\\Users\\Cody\\eclipse-workspace\\LibraryTriviaCenter\\img\\" + topic + ".png"), JLabel.CENTER);
+		background.setSize(450, 300);
+		background.setBounds(0, 0, 444, 272);
+		frmQuestion.getContentPane().add(background);
 	}
 	
 	// shuffle answers to provide different answer button positions
