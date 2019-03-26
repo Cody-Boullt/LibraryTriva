@@ -14,6 +14,9 @@ import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class TopicSelect extends JFrame {
@@ -41,15 +44,18 @@ public class TopicSelect extends JFrame {
 	 * @param grade 
 	 */
 	public TopicSelect(String grade) {
+		setResizable(false);
 		setTitle("Topic Selection");
 		getContentPane().setLayout(null);
 		
 		JLabel lblLibraryCenter = new JLabel("Library Center");
+		lblLibraryCenter.setForeground(Color.WHITE);
 		lblLibraryCenter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 14));
 		lblLibraryCenter.setBounds(156, 34, 103, 26);
 		getContentPane().add(lblLibraryCenter);
 		
 		JLabel lblChooseATopic = new JLabel("Choose a topic:");
+		lblChooseATopic.setForeground(Color.WHITE);
 		lblChooseATopic.setFont(new Font("Eras Bold ITC", Font.PLAIN, 14));
 		lblChooseATopic.setBounds(156, 67, 113, 27);
 		getContentPane().add(lblChooseATopic);
@@ -63,7 +69,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnEnglish.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
-		btnEnglish.setBounds(67, 105, 90, 28);
+		btnEnglish.setBounds(95, 122, 90, 43);
 		getContentPane().add(btnEnglish);
 		
 		JButton btnMath = new JButton("Science");
@@ -75,7 +81,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnMath.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
-		btnMath.setBounds(67, 191, 90, 28);
+		btnMath.setBounds(95, 191, 90, 43);
 		getContentPane().add(btnMath);
 		
 		JButton btnScience = new JButton("History");
@@ -87,7 +93,7 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnScience.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
-		btnScience.setBounds(273, 105, 90, 28);
+		btnScience.setBounds(254, 122, 90, 43);
 		getContentPane().add(btnScience);
 		
 		JButton btnHistory = new JButton("English");
@@ -99,11 +105,11 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		btnHistory.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
-		btnHistory.setBounds(273, 191, 90, 28);
+		btnHistory.setBounds(254, 191, 90, 43);
 		getContentPane().add(btnHistory);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 434, 23);
+		menuBar.setBounds(0, 0, 444, 23);
 		getContentPane().add(menuBar);
 		
 		JMenu menu = new JMenu("File");
@@ -139,6 +145,10 @@ public class TopicSelect extends JFrame {
 			}
 		});
 		menu_1.add(menuItem_2);
+		
+		JLabel background = new JLabel("", new ImageIcon("C:\\Users\\Cody\\eclipse-workspace\\LibraryTriviaCenter\\img\\MainMenu.png"), SwingConstants.CENTER);
+		background.setBounds(0, 0, 444, 272);
+		getContentPane().add(background);
 		initialize();
 	}
 
