@@ -142,7 +142,7 @@ public class AnswerArray {
 		
 		// 4th grade history
 		answers[20][2] = "7";
-		answers[21][2] = "Harriet Tuban";
+		answers[21][2] = "Harriet Tubman";
 		answers[22][2] = "United States and Soviet Union";
 		answers[23][2] = "7";
 		answers[24][2] = "1969";
@@ -534,60 +534,172 @@ public class AnswerArray {
 		wrongAnswers[19][3][2] = "Thare";
 		
 		// 4th grade math
-		answers[20][0] = "4/7";
-		answers[21][0] = "3";
-		answers[22][0] = "100";
-		answers[23][0] = "11";
-		answers[24][0] = "1/2";
+		wrongAnswers[20][0][0] = "3/7";
+		wrongAnswers[20][0][1] = "1/7";
+		wrongAnswers[20][0][2] = "7/7";
+		
+		wrongAnswers[21][0][0] = "1";
+		wrongAnswers[21][0][1] = "2";
+		wrongAnswers[21][0][2] = "4";
+		
+		wrongAnswers[22][0][0] = "75";
+		wrongAnswers[22][0][1] = "150";
+		wrongAnswers[22][0][2] = "110";
+		
+		wrongAnswers[23][0][0] = "1";
+		wrongAnswers[23][0][1] = "10";
+		wrongAnswers[23][0][2] = "22";
+		
+		wrongAnswers[24][0][0] = "1/4";
+		wrongAnswers[24][0][1] = "1/3";
+		wrongAnswers[24][0][2] = "1";
 		
 		// 4th grade science
-		answers[20][1] = "1";
-		answers[21][1] = "Caterpillar";
-		answers[22][1] = "Gravity";
-		answers[23][1] = "Molten rock in Earth's crust";
-		answers[24][1] = "Uranus";
+		wrongAnswers[20][1][0] = "0";
+		wrongAnswers[20][1][1] = "2";
+		wrongAnswers[20][1][2] = "3";
+		
+		wrongAnswers[21][1][0] = "Dog";
+		wrongAnswers[21][1][1] = "Seagull";
+		wrongAnswers[21][1][2] = "Lion";
+		
+		wrongAnswers[22][1][0] = "Glue";
+		wrongAnswers[22][1][1] = "Weight";
+		wrongAnswers[22][1][2] = "Magic";
+		
+		wrongAnswers[23][1][0] = "A pokemon";
+		wrongAnswers[23][1][1] = "A color";
+		wrongAnswers[23][1][2] = "A form of gas";
+		
+		wrongAnswers[24][1][0] = "Neptune";
+		wrongAnswers[24][1][1] = "Pluto";
+		wrongAnswers[24][1][2] = "Planet X";
 		
 		// 4th grade history
-		answers[20][2] = "7";
-		answers[21][2] = "Harriet Tuban";
-		answers[22][2] = "United States and Soviet Union";
-		answers[23][2] = "7";
-		answers[24][2] = "1969";
+		wrongAnswers[20][2][0] = "5";
+		wrongAnswers[20][2][1] = "6";
+		wrongAnswers[20][2][2] = "8";
+		
+		wrongAnswers[21][2][0] = "Rosa Park";
+		wrongAnswers[21][2][1] = "Martin Luther King";
+		wrongAnswers[21][2][2] = "Django";
+		
+		wrongAnswers[22][2][0] = "United States and England";
+		wrongAnswers[22][2][1] = "England and Soviet Union";
+		wrongAnswers[22][2][2] = "France and England";
+		
+		wrongAnswers[23][2][0] = "5";
+		wrongAnswers[23][2][1] = "6";
+		wrongAnswers[23][2][2] = "8";
+		
+		wrongAnswers[24][2][0] = "1968";
+		wrongAnswers[24][2][1] = "1970";
+		wrongAnswers[24][2][2] = "1971";
 		
 		// 4th grade English
-		answers[20][3] = "-ly";
-		answers[21][3] = "Beauty";
-		answers[22][3] = "Mom started cutting up carrots, celery, and peppers.";
-		answers[23][3] = "An";
-		answers[24][3] = "An";
+		wrongAnswers[20][3][0] = "Rap";
+		wrongAnswers[20][3][1] = "Rapid";
+		wrongAnswers[20][3][2] = "idly";
+		
+		wrongAnswers[21][3][0] = "Beaut";
+		wrongAnswers[21][3][1] = "tiful";
+		wrongAnswers[21][3][2] = "ful";
+		
+		wrongAnswers[22][3][0] = "Mom started cutting up carrots celery and peppers.";
+		wrongAnswers[22][3][1] = "Mom started cutting up carrots celery, and peppers.";
+		wrongAnswers[22][3][2] = "Mom started cutting up carrots, celery and peppers.";
+		
+		wrongAnswers[23][3][0] = "A";
+		wrongAnswers[23][3][1] = "Two";
+		wrongAnswers[23][3][2] = "These";
+		
+		wrongAnswers[24][3][0] = "a";
+		wrongAnswers[24][3][1] = "the";
+		wrongAnswers[24][3][2] = "two";
 		
 		// 5th grade math
-		answers[25][0] = "253";
-		answers[26][0] = "170";
-		answers[27][0] = "12,667";
-		answers[28][0] = "2 1/5";
-		answers[29][0] = "4 cups";
+		wrongAnswers[25][0][0] = "352";
+		wrongAnswers[25][0][1] = "235";
+		wrongAnswers[25][0][2] = "523";
+		
+		wrongAnswers[26][0][0] = "270";
+		wrongAnswers[26][0][1] = "175";
+		wrongAnswers[26][0][2] = "140";
+		
+		wrongAnswers[27][0][0] = "1667";
+		wrongAnswers[27][0][1] = "667";
+		wrongAnswers[27][0][2] = "12,000";
+		
+		wrongAnswers[28][0][0] = "1 4/5";
+		wrongAnswers[28][0][1] = "11/15";
+		wrongAnswers[28][0][2] = "2 2/5";
+		
+		wrongAnswers[29][0][0] = "4 1/2 cups";
+		wrongAnswers[29][0][1] = "3 4/4 cups";
+		wrongAnswers[29][0][2] = "2 cups";
 		
 		// 5th grade science
-		answers[25][1] = "Evaporation";
-		answers[26][1] = "Age";
-		answers[27][1] = "2";
-		answers[28][1] = "Topsoil, Subsoil, Parent Material, and Bedrock";
-		answers[29][1] = "Diamond";
+		wrongAnswers[25][1][0] = "Condensation";
+		wrongAnswers[25][1][1] = "Freezing";
+		wrongAnswers[25][1][2] = "Melting";
+		
+		wrongAnswers[26][1][0] = "Gender";
+		wrongAnswers[26][1][1] = "Health";
+		wrongAnswers[26][1][2] = "Polution";
+		
+		wrongAnswers[27][1][0] = "0";
+		wrongAnswers[27][1][1] = "1";
+		wrongAnswers[27][1][2] = "3";
+		
+		wrongAnswers[28][1][0] = "Dirt, Mud, Gravel, and Rock";
+		wrongAnswers[28][1][1] = "Soil, Clay, Limestone, and Stone";
+		wrongAnswers[28][1][2] = "Soil, Mud, Plant Material, and Hardrock";
+		
+		wrongAnswers[29][1][0] = "Quartz";
+		wrongAnswers[29][1][1] = "Glass";
+		wrongAnswers[29][1][2] = "Lava Rock";
 		
 		// 5th grade history
-		answers[25][2] = "Delaware";
-		answers[26][2] = "4 years";
-		answers[27][2] = "The Great War";
-		answers[28][2] = "British fired guns into a hostile crowd of colonists";
-		answers[29][2] = "Rosa Park";
+		wrongAnswers[25][2][0] = "Virginia";
+		wrongAnswers[25][2][1] = "Maryland";
+		wrongAnswers[25][2][2] = "New York";
+		
+		wrongAnswers[26][2][0] = "2 years";
+		wrongAnswers[26][2][1] = "3 years";
+		wrongAnswers[26][2][2] = "5 years";
+		
+		wrongAnswers[27][2][0] = "The Big War";
+		wrongAnswers[27][2][1] = "The Terrible War";
+		wrongAnswers[27][2][2] = "The War of Worlds";
+		
+		wrongAnswers[28][2][0] = "Colonists dumped tea into the harbor";
+		wrongAnswers[28][2][1] = "A very famous painting";
+		wrongAnswers[28][2][2] = "British troops killed by colonists";
+		
+		wrongAnswers[29][2][0] = "Harriet Tubman";
+		wrongAnswers[29][2][1] = "Martin Luther King";
+		wrongAnswers[29][2][2] = "Martin Luther King Jr";
 		
 		// 5th grade English
-		answers[25][3] = "I";
-		answers[26][3] = "meow";
-		answers[27][3] = "Before class";
-		answers[28][3] = "Last winter, school got canceled twice.";
-		answers[29][3] = "and & but";
+		wrongAnswers[25][3][0] = "an";
+		wrongAnswers[25][3][1] = "Crocodile";
+		wrongAnswers[25][3][2] = "saw";
+		
+		wrongAnswers[26][3][0] = "The";
+		wrongAnswers[26][3][1] = "cats";
+		wrongAnswers[26][3][2] = ".";
+		
+		wrongAnswers[27][3][0] = "Before";
+		wrongAnswers[27][3][1] = "Josh";
+		wrongAnswers[27][3][2] = "pen";
+		
+		wrongAnswers[28][3][0] = "Last winter school got canceled, twice.";
+		wrongAnswers[28][3][1] = "Last winter school, got canceled twice.";
+		wrongAnswers[28][3][2] = "Last, winter school got canceled twice.";
+		
+		wrongAnswers[29][3][0] = "I";
+		wrongAnswers[29][3][1] = "like & doing";
+		wrongAnswers[29][3][2] = "and";
 	}
 	
 	// set correct answer with same index as question
