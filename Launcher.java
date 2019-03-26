@@ -59,8 +59,6 @@ public class Launcher extends JFrame{
 		frmLibraryTriviaCenter.getContentPane().setLayout(null);
 		
 		JLabel background = new JLabel();
-		ImageIcon img = new ImageIcon("img/MainMenu.png");
-		
 		JLabel lblNewLabel = new JLabel("Welcome to the Library Trivia Center!");
 		lblNewLabel.setBounds(10, 22, 424, 24);
 		lblNewLabel.setForeground(Color.WHITE);
@@ -104,7 +102,7 @@ public class Launcher extends JFrame{
 		});
 		btnQuitGame.setBounds(166, 154, 111, 23);
 		frmLibraryTriviaCenter.getContentPane().add(btnQuitGame);
-		background = new JLabel("", img, JLabel.CENTER);
+		background = new JLabel("", new ImageIcon("C:\\Users\\Cody\\eclipse-workspace\\LibraryTriviaCenter\\img\\MainMenu.png"), JLabel.CENTER);
 		background.setSize(450, 300);
 		background.setBounds(0, 0, 444, 272);
 		frmLibraryTriviaCenter.getContentPane().add(background);
