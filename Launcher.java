@@ -93,7 +93,7 @@ public class Launcher extends JFrame{
 		btnHowToPlay.setBounds(166, 119, 111, 23);
 		frmLibraryTriviaCenter.getContentPane().add(btnHowToPlay);
 		
-		JButton btnQuitGame = new JButton("Quit Game");
+		JButton btnQuitGame = new JButton("Quit");
 		btnQuitGame.setFont(new Font("Eras Bold ITC", Font.PLAIN, 11));
 		btnQuitGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -102,7 +102,7 @@ public class Launcher extends JFrame{
 		});
 		btnQuitGame.setBounds(166, 154, 111, 23);
 		frmLibraryTriviaCenter.getContentPane().add(btnQuitGame);
-		background = new JLabel("", new ImageIcon("C:\\Users\\Cody\\eclipse-workspace\\LibraryTriviaCenter\\img\\MainMenu.png"), JLabel.CENTER);
+		background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\MainMenu.png"), JLabel.CENTER);
 		background.setSize(450, 300);
 		background.setBounds(0, 0, 444, 272);
 		frmLibraryTriviaCenter.getContentPane().add(background);
