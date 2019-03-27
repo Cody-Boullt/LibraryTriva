@@ -94,7 +94,6 @@ public class Question extends JFrame {
 		});
 		btnAnswer_1.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		btnAnswer_1.setBounds(53, 80, 147, 75);
-		//btnAnswer.setText(ansPassed);
 		frmQuestion.getContentPane().add(btnAnswer_1);
 		
 		JButton btnAnswer_2 = new JButton(answerTwo);
@@ -171,7 +170,7 @@ public class Question extends JFrame {
 		});
 		menu_1.add(menuItem_2);
 		
-		background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\" + topic + ".png"), JLabel.CENTER);
+		background = new JLabel("", new ImageIcon("img/" + topic + ".png"), JLabel.CENTER);
 		background.setSize(450, 300);
 		background.setBounds(0, 0, 444, 272);
 		frmQuestion.getContentPane().add(background);
