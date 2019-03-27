@@ -182,7 +182,7 @@ public class Difficulty extends JFrame {
 		btnFive.setBounds(247, 192, 119, 39);
 		getContentPane().add(btnFive);
 		
-		JLabel background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\MainMenu.png"), SwingConstants.CENTER);
+		JLabel background = new JLabel("", new ImageIcon("img/MainMenu.png"), SwingConstants.CENTER);
 		background.setBounds(0, 0, 444, 272);
 		getContentPane().add(background);
 		initialize();
