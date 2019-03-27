@@ -27,7 +27,7 @@ public class GameOver extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String choice, int score) {
+	public static void main(Score score) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -43,7 +43,7 @@ public class GameOver extends JFrame {
 	/**
 	 * Create the application.
 	 */
-	public GameOver(int score) {
+	public GameOver(Score score) {
 		initialize(score);
 	}
 
@@ -51,10 +51,10 @@ public class GameOver extends JFrame {
 	 * Initialize the contents of the frame.
 	 * @param score 
 	 */
-	private void initialize(int score) {
+	private void initialize(Score score) {
 		frmGameOver = new JFrame();
 		frmGameOver.setTitle("Game Over");
-		frmGameOver.setBounds(100, 100, 450, 300);
+		frmGameOver.setBounds(200, 200, 450, 300);
 		frmGameOver.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmGameOver.getContentPane().setLayout(null);
 		lblGameOver.setForeground(Color.WHITE);
@@ -133,20 +133,22 @@ public class GameOver extends JFrame {
 		buttonPlayAgain.setBounds(67, 212, 135, 28);
 		frmGameOver.getContentPane().add(buttonPlayAgain);
 		
-		JLabel lblScoreCounter = new JLabel(Integer.toString(score));
+		JLabel lblScoreCounter = new JLabel(Integer.toString(score.getScore()));
 		lblScoreCounter.setForeground(Color.WHITE);
 		lblScoreCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		lblScoreCounter.setBounds(197, 128, 66, 31);
 		frmGameOver.getContentPane().add(lblScoreCounter);
 		
-		JLabel lblHighScoreCounter = new JLabel(Integer.toString(score));
+		
+		
+		JLabel lblHighScoreCounter = new JLabel(Integer.toString(score.getHighScore()));
 		lblHighScoreCounter.setForeground(Color.WHITE);
 		lblHighScoreCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		lblHighScoreCounter.setBounds(243, 162, 66, 31);
 		frmGameOver.getContentPane().add(lblHighScoreCounter);
 		
 		JLabel background = new JLabel();
-		background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\MainMenu.png"), JLabel.CENTER);
+		background = new JLabel("", new ImageIcon("img/MainMenu.png"), JLabel.CENTER);
 		background.setSize(450, 300);
 		background.setBounds(0, 0, 444, 272);
 		frmGameOver.getContentPane().add(background);
