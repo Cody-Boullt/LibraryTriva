@@ -171,7 +171,7 @@ public class Question extends JFrame {
 		});
 		menu_1.add(menuItem_2);
 		
-		background = new JLabel("", new ImageIcon("C:\\Users\\Cody\\eclipse-workspace\\LibraryTriviaCenter\\img\\" + topic + ".png"), JLabel.CENTER);
+		background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\" + topic + ".png"), JLabel.CENTER);
 		background.setSize(450, 300);
 		background.setBounds(0, 0, 444, 272);
 		frmQuestion.getContentPane().add(background);
