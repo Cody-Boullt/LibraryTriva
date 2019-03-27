@@ -4,6 +4,7 @@
  * 03/26/2019
  */
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionListener;
@@ -14,6 +15,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 @SuppressWarnings("serial")
@@ -22,8 +24,8 @@ import javax.swing.JButton;
 public class Answer extends JFrame {
 
 	private JFrame frmAnswer;
-	int strike = 0;
-	int score = 0;
+	int strike;
+	int score;
 
 	/**
 	 * Launch the application.
@@ -96,31 +98,16 @@ public class Answer extends JFrame {
 		menu_1.add(menuItem_2);
 		frmAnswer.getContentPane().setLayout(null);
 		
-		if(choice == questPass){
-			
-			JLabel lblCorrect = new JLabel("Correct!");
-			lblCorrect.setBounds(131, 29, 165, 31);
-			frmAnswer.getContentPane().add(lblCorrect);
-			lblCorrect.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
-			
-			score = score + 1;
-		}
-		else {
-			
-			JLabel lblIncorrect = new JLabel("Incorrect!");
-			lblIncorrect.setBounds(131, 29, 165, 31);
-			frmAnswer.getContentPane().add(lblIncorrect);
-			lblIncorrect.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
-			
-			strike = strike + 1;
-		}
-		
+		scoreCounter(choice, questPass);
+
 		JLabel labelScore = new JLabel("Score:");
+		labelScore.setForeground(Color.WHITE);
 		labelScore.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		labelScore.setBounds(131, 107, 63, 31);
 		frmAnswer.getContentPane().add(labelScore);
 		
 		JLabel lblStrikes = new JLabel("Strikes:");
+		lblStrikes.setForeground(Color.WHITE);
 		lblStrikes.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		lblStrikes.setBounds(131, 141, 75, 31);
 		frmAnswer.getContentPane().add(lblStrikes);
@@ -139,16 +126,53 @@ public class Answer extends JFrame {
 
 		
 		JLabel lblScoreCounter = new JLabel(Integer.toString(score));
+		lblScoreCounter.setForeground(Color.WHITE);
 		lblScoreCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		lblScoreCounter.setBounds(197, 107, 112, 31);
 		frmAnswer.getContentPane().add(lblScoreCounter);
 		
 		JLabel lblStrikeCounter = new JLabel(Integer.toString(strike));
+		lblStrikeCounter.setForeground(Color.WHITE);
 		lblStrikeCounter.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
 		lblStrikeCounter.setBounds(207, 141, 103, 31);
 		frmAnswer.getContentPane().add(lblStrikeCounter);
 		buttonContinue.setFont(new Font("Eras Bold ITC", Font.PLAIN, 12));
 		buttonContinue.setBounds(141, 191, 134, 28);
 		frmAnswer.getContentPane().add(buttonContinue);
+		
+		JLabel background = new JLabel();
+		background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\MainMenu.png"), JLabel.CENTER);
+		background.setSize(450, 300);
+		background.setBounds(0, 0, 444, 272);
+		frmAnswer.getContentPane().add(background);
+	}
+
+	public void scoreCounter(String choice, String questPass) {
+		
+		if(choice == questPass){
+			
+			JLabel lblCorrect = new JLabel("Correct!");
+			lblCorrect.setForeground(Color.WHITE);
+			lblCorrect.setBounds(131, 29, 165, 31);
+			frmAnswer.getContentPane().add(lblCorrect);
+			lblCorrect.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		
+			score++;
+		}
+		else {
+		
+			JLabel lblIncorrect = new JLabel("Incorrect!");
+			lblIncorrect.setForeground(Color.WHITE);
+			lblIncorrect.setBounds(131, 29, 165, 31);
+			frmAnswer.getContentPane().add(lblIncorrect);
+			lblIncorrect.setFont(new Font("Eras Bold ITC", Font.PLAIN, 18));
+		
+			strike = 3;
+		}
+		
+		if(strike >= 3) {
+			GameOver.main(choice, score);
+			frmAnswer.dispose();
+		}
 	}
 }
