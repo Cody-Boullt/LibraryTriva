@@ -44,9 +44,6 @@ public class TopicSelect extends JFrame {
 	 * @param grade 
 	 */
 	public TopicSelect(String grade) {
-		
-		
-		
 		setResizable(false);
 		setTitle("Topic Selection");
 		getContentPane().setLayout(null);
@@ -149,7 +146,7 @@ public class TopicSelect extends JFrame {
 		});
 		menu_1.add(menuItem_2);
 		
-		JLabel background = new JLabel("", new ImageIcon("C:\\Users\\Richie\\eclipse-workspace\\LibraryTriviaCenter\\src\\img\\MainMenu.png"), SwingConstants.CENTER);
+		JLabel background = new JLabel("", new ImageIcon("img/MainMenu.png"), SwingConstants.CENTER);
 		background.setBounds(0, 0, 444, 272);
 		getContentPane().add(background);
 		initialize();
